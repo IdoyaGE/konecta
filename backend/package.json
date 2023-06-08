@@ -27,9 +27,6 @@
     "nodemon": "^2.0.22",
     "path": "^0.12.7",
     "path-to-regexp": "^6.2.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.11.2",
     "universal-cookie": "^4.0.4"
   },
   "keywords": [],
