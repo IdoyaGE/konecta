@@ -7,7 +7,6 @@ import { signOut } from "firebase/auth";
 import { auth } from "./firebase";
 //import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Footer from "./components/Footer";
-import Inicio from "./inicio";
 import Navbar from "./components/navbar";
 
 const cookies = new Cookies();
@@ -26,28 +25,6 @@ function App() {
 
   //Chats
   const rooms = [
-    {
-      name: "Teconología",
-    },
-    {
-      name: "Tramites y ayudas",
-    },
-    {
-      name: "Banca",
-    },
-    {
-      name: "Tramites médicos",
-    },
-
-    {
-      name: "Compras",
-    },
-    {
-      name: "Pequeñas reparaciones",
-    },
-    {
-      name: "Nutrición y alimentacion",
-    },
     {
       name: "Transporte",
     },
@@ -86,9 +63,9 @@ function App() {
           </div>
         </div>
       )}
-      <div className="sign-out">
+      {/* <div className="sign-out">
         <button onClick={signUserOut}>Salir</button>
-      </div>
+      </div> */}
 
       <Footer />
     </div>
