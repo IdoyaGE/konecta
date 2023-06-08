@@ -25,7 +25,10 @@
     "react-scripts": "^5.0.1",
     "redux-persist": "^6.0.0",
     "sass": "^1.63.2",
+<<<<<<< HEAD
+=======
     "universal-cookie": "^4.0.4",
+>>>>>>> dev
     "web-vitals": "^2.1.4",
     "yup": "^1.2.0"
   },
