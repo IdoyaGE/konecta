@@ -7,7 +7,9 @@ import { Routes, Route } from "react-router-dom";
 import { auth } from "./firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import Start from "./components/start";
-import Chat from "../src/App";
+import Tramites from "./AppTramites";
+import Hogar from "./AppHogar";
+import Movilidad from "./AppMovilidad";
 
 function Inicio() {
   const [user, setUser] = useState(null);
@@ -33,7 +35,9 @@ function Inicio() {
             <Route path="/start" element={<Start user={user} />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/chat" element={<Chat />} />
+            <Route path="/tramites" element={<Tramites />} />
+            <Route path="/hogar" element={<Hogar />} />
+            <Route path="/movilidad" element={<Movilidad />} />
           </Routes>
         </section>
       </div>
