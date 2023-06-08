@@ -2,37 +2,24 @@
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  font-family: "Montserrat", sans-serif;
-  font-family: "Poppins", sans-serif;
-  font-family: "Quicksand", sans-serif;
-  font-family: "Wix Madefor Display", sans-serif;
+  font-family: "Raleway", sans-serif;
   padding-top: 15px;
+  position: relative;
 }
 
 .header {
   margin-bottom: 20px;
-  font-family: "Montserrat", sans-serif;
-  font-family: "Poppins", sans-serif;
-  font-family: "Quicksand", sans-serif;
-  font-family: "Wix Madefor Display", sans-serif;
+  text-align: center;
 }
 
 .messages {
   margin-bottom: 20px;
-  font-family: "Montserrat", sans-serif;
-  font-family: "Poppins", sans-serif;
-  font-family: "Quicksand", sans-serif;
-  font-family: "Wix Madefor Display", sans-serif;
 }
 
 .message {
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 10px;
-  font-family: "Montserrat", sans-serif;
-  font-family: "Poppins", sans-serif;
-  font-family: "Quicksand", sans-serif;
-  font-family: "Wix Madefor Display", sans-serif;
 }
 
 .user {
@@ -41,36 +28,47 @@
 
 .new-message-form {
   display: flex;
+  justify-content: center;
 }
 
 .new-message-input {
   flex: 1;
   padding: 10px;
-  border: none;
+  border: 1px solid #009ec3;
   border-radius: 5px;
   margin-right: 10px;
-  font-family: "Montserrat", sans-serif;
-  font-family: "Poppins", sans-serif;
-  font-family: "Quicksand", sans-serif;
-  font-family: "Wix Madefor Display", sans-serif;
+  font-family: "Raleway", sans-serif;
+  background-color: white;
 }
 
 .send-button {
   padding: 10px 20px;
-  background-color: pink;
+  background-color: #009ec3;
   color: #333;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-family: "Montserrat", sans-serif;
-  font-family: "Poppins", sans-serif;
-  font-family: "Quicksand", sans-serif;
-  font-family: "Wix Madefor Display", sans-serif;
+  font-family: "Raleway", sans-serif;
+}
+
+.new-message-input::placeholder {
+  color: #009ec3;
 }
 
 /* Estilos para dispositivos móviles */
 @media only screen and (max-width: 600px) {
   .chat-app {
     padding: 10px;
+  }
+
+  .new-message-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .new-message-input {
+    margin-right: 0;
+    margin-bottom: 10px;
+    width: 100%;
   }
 }

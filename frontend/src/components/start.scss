@@ -1,9 +1,45 @@
-.botonTramites {
-  background-color: #008dae;
+// start.scss
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
-.textoStart {
-  text-decoration: none;
+h3 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.button-container button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+  opacity: 0.8;
+}
+
+.botonTramites {
+  background-color: #008dae;
 }
 
 .botonHogar {
@@ -16,4 +52,12 @@
 
 .botonInfo {
   background-color: none;
+}
+
+.textoStart {
+  text-decoration: none;
+  color: #fff;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 18px;
 }

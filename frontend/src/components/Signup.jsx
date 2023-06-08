@@ -36,36 +36,36 @@ const Signup = () => {
             <h1> Registro </h1>
             <form>
               <div>
-                <label htmlFor="email-address">Email address</label>
+                <label htmlFor='email-address'>Email address</label>
                 <input
-                  type="email"
-                  label="Email address"
+                  type='email'
+                  label='Email address'
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  placeholder="Email address"
+                  placeholder='Email address'
                 />
               </div>
 
               <div>
-                <label htmlFor="password">Password</label>
+                <label htmlFor='password'>Password</label>
                 <input
-                  type="password"
-                  label="Create password"
+                  type='password'
+                  label='Create password'
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
-                  placeholder="Password"
+                  placeholder='Password'
                 />
               </div>
 
-              <button type="submit" onClick={onSubmit}>
-                Sign up
+              <button type='submit' onClick={onSubmit}>
+                Entra
               </button>
             </form>
 
             <p>
-              Already have an account? <NavLink to="/login">Sign in</NavLink>
+              No tienes cuenta? <NavLink to='/login'>Regístrate</NavLink>
             </p>
           </div>
         </div>

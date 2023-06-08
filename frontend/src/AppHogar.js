@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "./App.scss";
 import Cookies from "universal-cookie";
 import { useState } from "react";
 import { Chat } from "./components/Chat";
@@ -7,9 +7,7 @@ import { signOut } from "firebase/auth";
 import { auth } from "./firebase";
 //import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Footer from "./components/Footer";
-import Inicio from "./inicio";
 import Navbar from "./components/navbar";
-import UserProfile from "./components/userProfile";
 
 const cookies = new Cookies();
 
@@ -28,19 +26,6 @@ function App() {
   //Chats
   const rooms = [
     {
-      name: "Teconología",
-    },
-    {
-      name: "Tramites y ayudas",
-    },
-    {
-      name: "Banca",
-    },
-    {
-      name: "Tramites médicos",
-    },
-
-    {
       name: "Compras",
     },
     {
@@ -48,12 +33,6 @@ function App() {
     },
     {
       name: "Nutrición y alimentacion",
-    },
-    {
-      name: "Transporte",
-    },
-    {
-      name: "Ocio",
     },
   ];
 
@@ -68,12 +47,11 @@ function App() {
   return (
     <div>
       <Navbar />
-      <UserProfile />
       {room ? (
         <Chat room={room} />
       ) : (
         <div className='room'>
-          <h2>¿En qué te podemos ayudar? </h2>
+          <h2>Estás en la categoría HOGAR ¿En qué te podemos ayudar? </h2>
           <div className='room-list'>
             {rooms.map((room, index) => (
               <div className='room-item' key={index}>
@@ -88,9 +66,9 @@ function App() {
           </div>
         </div>
       )}
-      <div className='sign-out'>
+      {/* <div className="sign-out">
         <button onClick={signUserOut}>Salir</button>
-      </div>
+      </div> */}
 
       <Footer />
     </div>

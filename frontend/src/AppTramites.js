@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "./App.scss";
 import Cookies from "universal-cookie";
 import { useState } from "react";
 import { Chat } from "./components/Chat";
@@ -7,9 +7,11 @@ import { signOut } from "firebase/auth";
 import { auth } from "./firebase";
 //import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Footer from "./components/Footer";
-import Inicio from "./inicio";
 import Navbar from "./components/navbar";
-import UserProfile from "./components/userProfile";
+import logo1 from "./images/Icon/Vector.jpg";
+import logo2 from "./images/Icon/Vectora.jpg";
+import logo3 from "./images/Icon/Vector2.jpg";
+import logo4 from "./images/Icon/Vector3.jpg";
 
 const cookies = new Cookies();
 
@@ -29,31 +31,19 @@ function App() {
   const rooms = [
     {
       name: "Teconología",
+      image: logo1,
     },
     {
       name: "Tramites y ayudas",
+      image: logo2,
     },
     {
       name: "Banca",
+      image: logo3,
     },
     {
       name: "Tramites médicos",
-    },
-
-    {
-      name: "Compras",
-    },
-    {
-      name: "Pequeñas reparaciones",
-    },
-    {
-      name: "Nutrición y alimentacion",
-    },
-    {
-      name: "Transporte",
-    },
-    {
-      name: "Ocio",
+      image: logo4,
     },
   ];
 
@@ -68,12 +58,11 @@ function App() {
   return (
     <div>
       <Navbar />
-      <UserProfile />
       {room ? (
         <Chat room={room} />
       ) : (
         <div className='room'>
-          <h2>¿En qué te podemos ayudar? </h2>
+          <h2> Estás en la categoría Trámites ¿En qué te podemos ayudar? </h2>
           <div className='room-list'>
             {rooms.map((room, index) => (
               <div className='room-item' key={index}>
@@ -81,6 +70,7 @@ function App() {
                   className='buttonroom'
                   onClick={() => setRoom(room.name)}
                 >
+                  <img src={room.image} alt={room.name} />
                   {room.name}
                 </button>
               </div>
@@ -88,9 +78,9 @@ function App() {
           </div>
         </div>
       )}
-      <div className='sign-out'>
+      {/* <div className="sign-out">
         <button onClick={signUserOut}>Salir</button>
-      </div>
+      </div> */}
 
       <Footer />
     </div>
