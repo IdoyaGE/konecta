@@ -36,8 +36,6 @@ body {
 
 button {
   padding: 10px 20px;
-  background-color: pink;
-  color: #333;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -62,8 +60,6 @@ h3 {
 
 h1 {
   font-size: 30px;
-  color: pink;
-  text-decoration: solid;
 }
 
 /* Estilos para tablet y pantallas más grandes */
