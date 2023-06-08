@@ -1,25 +1,21 @@
 import React from "react";
 import "./App.css";
-import { Auth } from "./components/Auth";
 import Cookies from "universal-cookie";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { Chat } from "./components/Chat";
 import { signOut } from "firebase/auth";
 import { auth } from "./firebase";
-import room1 from "./images/bak.png";
-import room2 from "./images/ayudas.jpg";
-import room3 from "./images/banco.jpg";
-import room4 from "./images/compras.jpg";
-import room5 from "./images/reparaciones.jpg";
 //import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Footer from "./components/Footer";
+import Inicio from "./inicio";
+import Navbar from "./components/navbar";
 
 const cookies = new Cookies();
 
 function App() {
   const [isAuth, setIsAuth] = useState(cookies.get("auth-token"));
   const [room, setRoom] = useState(null);
-  const roomInputRef = useRef(null);
+  /* const roomInputRef = useRef(null); */
 
   const signUserOut = async () => {
     await signOut(auth);
@@ -31,73 +27,66 @@ function App() {
   //Chats
   const rooms = [
     {
-      name: "Lactancia y nutrición",
-      image: room1,
+      name: "Teconología",
     },
     {
-      name: "Juegos y actividades",
-      image: room2,
+      name: "Tramites y ayudas",
     },
     {
-      name: "Seguridad en el hogar",
-      image: room3,
+      name: "Banca",
     },
     {
-      name: "Ejercicios postparto",
-      image: room4,
+      name: "Tramites médicos",
     },
 
     {
-      name: "Productos",
-      image: room5,
+      name: "Compras",
+    },
+    {
+      name: "Pequeñas reparaciones",
+    },
+    {
+      name: "Nutrición y alimentacion",
+    },
+    {
+      name: "Transporte",
+    },
+    {
+      name: "Ocio",
     },
   ];
 
-  if (!isAuth) {
+  /*   if (!isAuth) {
     return (
       <div>
-        <Auth setIsAuth={setIsAuth} />
+        <Inicio setIsAuth={setIsAuth} />
       </div>
     );
-  }
+  } */
 
   return (
     <div>
-      {/* <nav>
-        <div className='navbar-logo'>
-          <imagen src={momplanet} alt='Logo' />
-        </div>
-        <ul className='navbar-links'>
-          <li>
-            <a href='./components/Aboutus'>Sobre nosotros</a>
-          </li>
-          <li>
-            <a href='./components/Blog'>Blog</a>
-          </li>
-        </ul>
-      </nav> */}
-
+      <Navbar />
       {room ? (
         <Chat room={room} />
       ) : (
-        <div className='room'>
+        <div className="room">
           <h2>¿De qué te gustaría hablar? </h2>
-          <div className='room-list'>
+          <div className="room-list">
             {rooms.map((room, index) => (
-              <div className='room-item' key={index}>
-                <img src={room.image} alt={room.name} />
+              <div className="room-item" key={index}>
                 <button
-                  className='buttonroom'
+                  className="buttonroom"
                   onClick={() => setRoom(room.name)}
                 >
-                  Chat {room.name}
+                  {room.name}
                 </button>
               </div>
             ))}
           </div>
         </div>
       )}
-      <div className='sign-out'>
+      <div className="sign-out">
         <button onClick={signUserOut}>Salir</button>
       </div>
 
