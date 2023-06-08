@@ -1,0 +1,117 @@
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.titulo {
+  font-size: 24px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  flex-wrap: wrap;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 0.5px solid #ccc;
+  border-radius: 5px;
+  flex-wrap: wrap;
+}
+
+.textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 0.5px solid #ccc;
+  border-radius: 5px;
+  flex-wrap: wrap;
+}
+
+input#imagen.file-input {
+  margin-bottom: 10px;
+  background-color: pink;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: pink;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.buttoncancel {
+  background-color: pink;
+}
+
+.buttonsubmit {
+  background-color: pink;
+}
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+  form {
+    padding: 10px;
+  }
+
+  .titulo {
+    font-size: 20px;
+  }
+
+  #title.input,
+  #body.textarea,
+  #image.file-input {
+    font-size: 14px;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
+h1.blog {
+  text-align: center;
+}
+h1.crea {
+  text-align: center;
+}
+
+@media only screen and (max-width: 400px) {
+  .titulo {
+    font-size: 18px;
+  }
+}
+.buttonEditar {
+  text-align: center;
+}
+.buttonDelete {
+  text-align: center;
+}
+.flexible-textarea {
+  min-height: 100px;
+  resize: vertical;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  height: auto;
+  max-height: 400px;
+}
+.flexible-input {
+  height: 70px;
+  resize: vertical;
+  width: 50%;
+  box-sizing: border-box;
+  overflow: hidden;
+  height: auto;
+  max-height: 200px;
+}
