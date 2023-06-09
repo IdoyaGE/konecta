@@ -3,7 +3,8 @@ import { signOut } from "firebase/auth";
 import { auth } from "../firebase";
 import { useNavigate } from "react-router-dom";
 import logo from "../images/konectatu.png";
-import "./Auth.css";
+import "./Auth.scss";
+import "./Home.scss";
 
 const Home = ({ user }) => {
   const navigate = useNavigate();
@@ -23,13 +24,13 @@ const Home = ({ user }) => {
   return (
     <>
       <nav>
-        <div className="container">
-          <img className="logo" src={logo} alt="logo" />
-          <h3>¿Necesitas ayuda?</h3>
+        <div className='container'>
+          <img className='logo' src={logo} alt='logo' />
+          <h3 className='answer'>¿Necesitas ayuda?</h3>
           <div>
             <p>
-              Conecta con voluntarios que te ayudarán a resolver tus dudas,
-              ayudarte con los recados, o simplemente a escucharte
+              Conecta con voluntarios que te ayudarán a resolver tus dudas
+              Pueden ayudarte con los recados o simplemente a escucharte
             </p>
             <h1>No estás sol@, entre todos nos ayudamos</h1>
             <p>
@@ -39,9 +40,9 @@ const Home = ({ user }) => {
           </div>
           <div>
             {user ? (
-              <button onClick={handleLogout}>Logout</button>
+              <button onClick={handleLogout}>Entrar</button>
             ) : (
-              <button onClick={() => navigate("/login")}>Login</button>
+              <button onClick={() => navigate("/login")}>Entrar</button>
             )}
           </div>
         </div>

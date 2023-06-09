@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { auth, provider } from "../firebase";
 import { NavLink, useNavigate } from "react-router-dom";
+import "./Login.scss";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -41,29 +42,29 @@ const Login = () => {
       <main>
         <section>
           <div>
-            <h1> INICIAR SESION</h1>
+            <h1>¿Quieres iniciar sesión?</h1>
 
             <form>
               <div>
-                <label htmlFor="email-address">Email address</label>
+                <label htmlFor='email-address'>Dirección de email</label>
                 <input
-                  id="email-address"
-                  name="email"
-                  type="email"
+                  id='email-address'
+                  name='email'
+                  type='email'
                   required
-                  placeholder="Email address"
+                  placeholder='Email address'
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
 
               <div>
-                <label htmlFor="password">Password</label>
+                <label htmlFor='password'>Password</label>
                 <input
-                  id="password"
-                  name="password"
-                  type="password"
+                  id='password'
+                  name='password'
+                  type='password'
                   required
-                  placeholder="Password"
+                  placeholder='Password'
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
@@ -73,8 +74,8 @@ const Login = () => {
               </div>
             </form>
 
-            <p className="text-sm text-white text-center">
-              No account yet? <NavLink to="/signup">Sign up</NavLink>
+            <p className='text-sm text-white text-center'>
+              No tienes cuenta? <NavLink to='/signup'>Regístrate</NavLink>
             </p>
           </div>
         </section>

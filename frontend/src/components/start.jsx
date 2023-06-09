@@ -12,26 +12,26 @@ const start = () => {
     <div>
       <Navbar />
       <h3>¿En que te podemos ayudar?</h3>
-      <button className="botonTramites">
-        <NavLink to="/tramites">
-          <img src={tramitesIcon} alt="tramites" />
-          <h1 className="textoStart">Tramites</h1>
+      <button className='botonTramites'>
+        <NavLink to='/tramites'>
+          <img src={tramitesIcon} alt='tramites' />
+          <h1 className='textoStart'>Tramites</h1>
         </NavLink>
       </button>
-      <button className="botonHogar">
-        <NavLink to="/hogar">
-          <img src={hogarIcon} alt="hogar" />
-          <h1 className="textoStart">Hogar</h1>
+      <button className='botonHogar'>
+        <NavLink to='/hogar'>
+          <img src={hogarIcon} alt='hogar' />
+          <h1 className='textoStart'>Hogar</h1>
         </NavLink>
       </button>
-      <button className="botonMovilidad">
-        <NavLink to="/movilidad">
-          <img src={movilidadIcon} alt="movilidad" />
-          <h1 className="textoStart">Movilidad</h1>
+      <button className='botonMovilidad'>
+        <NavLink to='/movilidad'>
+          <img src={movilidadIcon} alt='movilidad' />
+          <h1 className='textoStart'>Movilidad</h1>
         </NavLink>
       </button>
-      <button className="botonInfo">
-        <img src={info} alt="info" />
+      <button className='botonInfo'>
+        <img src={info} alt='info' />
       </button>
     </div>
   );

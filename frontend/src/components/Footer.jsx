@@ -12,9 +12,9 @@ const Footer = () => {
   return (
     <div>
       <footer>
-        <div className="redessociales">
-          <p className="copy">&copy; 2023 Konecta2</p>
-          <p className="email">Email: info@konecta2.com</p>
+        <div className='redessociales'>
+          <p className='copy'>&copy; 2023 konecta2</p>
+          <p className='email'>Email: info@konecta2.com</p>
 
           <ul class="list-unstyled d-flexiconosredes">
             <li class="facebook">

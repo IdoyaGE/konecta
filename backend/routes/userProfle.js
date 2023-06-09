@@ -1,18 +1,17 @@
-import express from "express";
-import {
-  getUser,
-  getUserFriends,
-  addRemoveFriend,
-} from "../controllers/user.js";
-import verifyToken from "../middleware/auth.js";
-//Instancia del enrutador
+const express = require("express");
 const router = express.Router();
+const userController = require("../controllers/userProfile");
 
-// Rutas GET para el middleware verifyToken y los controladores para obtener los users y los friends
-router.get("/:id", verifyToken, getUser);
-router.get("/:id/friends", verifyToken, getUserFriends);
+// Obtener todos los perfiles de usuario
+router.get("/", userController.getAllUsers);
 
-//Ruta PATCH que ejecuta el middleware verifyToken y el controlador de añadir y eliminar friends
-router.patch("/:id/:friendId", verifyToken, addRemoveFriend);
+// Crear un nuevo perfil de usuario
+router.post("/", userController.createUser);
 
-export default router;
+// Actualizar un perfil de usuario existente
+router.put("/:id", userController.updateUser);
+
+// Eliminar un perfil de usuario
+router.delete("/:id", userController.deleteUser);
+
+module.exports = router;

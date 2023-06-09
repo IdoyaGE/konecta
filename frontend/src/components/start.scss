@@ -1,19 +1,78 @@
-.botonTramites {
-  background-color: #008dae;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
-.textoStart {
-  text-decoration: none;
+h3 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.button-container button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+  opacity: 0.8;
+}
+
+.botonTramites {
+  background-color: #008dae;
+  width:100%;
+  
 }
 
 .botonHogar {
   background-color: #ffcd3d;
+  width:100%
 }
 
 .botonMovilidad {
   background-color: #ed6054;
+  width:100%
 }
 
 .botonInfo {
-  background-color: none;
+  background-color: transparent;
+}
+
+.textoStart {
+  text-decoration: none;
+  color: #fff;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .button-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .button-container button {
+    width: 150px;
+    height: 150px;
+  }
 }

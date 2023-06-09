@@ -1,0 +1,42 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+}
+
+.logo {
+  max-width: 200px;
+  margin-bottom: 20px;
+  background-color: #009ec3;
+}
+.answer {
+  color: #009ec3;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+h1 {
+  margin-bottom: 10px;
+  color: #009ec3;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #009ec3;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
+}
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+}

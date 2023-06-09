@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "./App.scss";
 import Cookies from "universal-cookie";
 import { useState } from "react";
 import { Chat } from "./components/Chat";
@@ -56,17 +56,17 @@ function App() {
       {room ? (
         <Chat room={room} />
       ) : (
-        <div className="room">
-          <h2>¿De qué te gustaría hablar? </h2>
-          <div className="room-list">
+        <div className='room'>
+          <h2>Estás en la categoría HOGAR ¿En qué te podemos ayudar? </h2>
+          <div className='room-list'>
             {rooms.map((room, index) => (
-              <div className="room-item" key={index}>
+              <div className='room-item' key={index}>
                 <button
-                  className="buttonroom"
+                  className='buttonroom'
                   onClick={() => setRoom(room.name)}
                 >
                   <img src={room.image} alt={room.name} />
-                  {room.name}
+                  <p>{room.name}</p>
                 </button>
               </div>
             ))}

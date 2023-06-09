@@ -1,0 +1,76 @@
+main {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Raleway", sans-serif;
+}
+
+h1 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #009ec3;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #009ec3;
+  border-radius: 5px;
+  font-family: "Raleway", sans-serif;
+}
+
+button {
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  background-color: #009ec3;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
+}
+
+.text-sm {
+  font-size: 0.8rem;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-center {
+  text-align: center;
+}
+
+a {
+  color: #009ec3;
+}
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+  main {
+    padding: 10px;
+  }
+}
+
+/* Estilos adicionales */
+input::placeholder {
+  margin-top: 5px;
+  color: #009ec3;
+  font-style: italic;
+}
+
+button + button {
+  margin-top: 10px;
+  align-self: center;
+}
