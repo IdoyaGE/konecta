@@ -10,6 +10,9 @@ import Start from "./components/start";
 import Tramites from "./AppTramites";
 import Hogar from "./AppHogar";
 import Movilidad from "./AppMovilidad";
+import Tramites from "./AppTramites";
+import Hogar from "./AppHogar";
+import Movilidad from "./AppMovilidad";
 
 function Inicio() {
   const [user, setUser] = useState(null);

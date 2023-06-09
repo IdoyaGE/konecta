@@ -16,41 +16,41 @@ const Footer = () => {
           <p className='copy'>&copy; 2023 konecta2</p>
           <p className='email'>Email: info@konecta2.com</p>
 
-          <ul class='list-unstyled d-flexiconosredes'>
-            <li class='facebook'>
+          <ul class="list-unstyled d-flexiconosredes">
+            <li class="facebook">
               <img
                 src={img7}
-                id='iconos'
-                alt='Logo facebook'
-                width='75px'
-                height='75px'
+                id="iconos"
+                alt="Logo facebook"
+                width="75px"
+                height="75px"
               />
             </li>
-            <li class='instagram'>
+            <li class="instagram">
               <img
                 src={img8}
-                id='iconos'
-                alt='Logo instagram'
-                width='75px'
-                height='75px'
+                id="iconos"
+                alt="Logo instagram"
+                width="75px"
+                height="75px"
               />
             </li>
-            <li class='linkedin'>
+            <li class="linkedin">
               <img
                 src={img9}
-                id='iconos'
-                alt='Logo linkedin'
-                width='75px'
-                height='75px'
+                id="iconos"
+                alt="Logo linkedin"
+                width="75px"
+                height="75px"
               />
             </li>
-            <li class='twitter'>
+            <li class="twitter">
               <img
                 src={img10}
-                id='iconos'
-                alt='Logo twitter'
-                width='75px'
-                height='75px'
+                id="iconos"
+                alt="Logo twitter"
+                width="75px"
+                height="75px"
               />
             </li>
           </ul>

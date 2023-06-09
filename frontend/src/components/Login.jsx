@@ -70,10 +70,7 @@ const Login = () => {
               </div>
 
               <div>
-                <button onClick={onLogin}>Entrar</button>
-                {/* <button onClick={onGoogleLogin}>
-                  Login con tu cuenta de Google
-                </button> */}
+                <button onClick={onLogin}>Login</button>
               </div>
             </form>
 
