@@ -24,9 +24,9 @@ const Home = ({ user }) => {
   return (
     <>
       <nav>
-        <div className='container'>
-          <img className='logo' src={logo} alt='logo' />
-          <h3 className='answer'>¿Necesitas ayuda?</h3>
+        <div className="container">
+          <img className="logo" src={logo} alt="logo" />
+          <h3 className="answer">¿Necesitas ayuda?</h3>
           <div>
             <p>
               Conecta con voluntarios que te ayudarán a resolver tus dudas
@@ -40,7 +40,7 @@ const Home = ({ user }) => {
           </div>
           <div>
             {user ? (
-              <button onClick={handleLogout}>Entrar</button>
+              <button onClick={handleLogout}>Salir</button>
             ) : (
               <button onClick={() => navigate("/login")}>Entrar</button>
             )}

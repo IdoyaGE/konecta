@@ -8,10 +8,10 @@ import { auth } from "./firebase";
 //import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Footer from "./components/Footer";
 import Navbar from "./components/navbar";
-import logo1 from "./images/Icon/Vector.jpg";
-import logo2 from "./images/Icon/Vectora.jpg";
-import logo3 from "./images/Icon/Vector2.jpg";
-import logo4 from "./images/Icon/Vector3.jpg";
+import logo1 from "./images/Icon/Vector.png";
+import logo2 from "./images/Icon/Vectora.png";
+import logo3 from "./images/Icon/Vector2.png";
+import logo4 from "./images/Icon/Vector3.png";
 
 const cookies = new Cookies();
 
@@ -61,13 +61,13 @@ function App() {
       {room ? (
         <Chat room={room} />
       ) : (
-        <div className='room'>
+        <div className="room">
           <h2> Estás en la categoría Trámites ¿En qué te podemos ayudar? </h2>
-          <div className='room-list'>
+          <div className="room-list">
             {rooms.map((room, index) => (
-              <div className='room-item' key={index}>
+              <div className="room-item" key={index}>
                 <button
-                  className='buttonroom'
+                  className="buttonroom"
                   onClick={() => setRoom(room.name)}
                 >
                   <img src={room.image} alt={room.name} />
