@@ -34,7 +34,7 @@ body {
   margin-top: 20px;
 }
 
-button {
+/* button {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -43,7 +43,7 @@ button {
   font-family: "Poppins", sans-serif;
   font-family: "Quicksand", sans-serif;
   font-family: "Wix Madefor Display", sans-serif;
-}
+} */
 
 /* Estilos para dispositivos móviles */
 @media only screen and (max-width: 600px) {

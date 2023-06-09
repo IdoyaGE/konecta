@@ -3,14 +3,15 @@ import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore } from "firebase/firestore"; //para el chat
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCWcH3UgD9BiHtWQ_PUQKEEMXQoDXknKEc",
-  authDomain: "konecta-ae85f.firebaseapp.com",
-  projectId: "konecta-ae85f",
-  storageBucket: "konecta-ae85f.appspot.com",
-  messagingSenderId: "902240274162",
-  appId: "1:902240274162:web:1d58bdb447e2a84bd5f26b",
-  measurementId: "G-XVW2T9J4CR",
-};
+  
+    apiKey: "AIzaSyAgrD1bRDvyCVJgtCbGpduubxz5HuQ0PMA",
+    authDomain: "chat-ef2d5.firebaseapp.com",
+    projectId: "chat-ef2d5",
+    storageBucket: "chat-ef2d5.appspot.com",
+    messagingSenderId: "420725299284",
+    appId: "1:420725299284:web:db22d70e2a64516c1c35c1"
+  };
+
 
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);

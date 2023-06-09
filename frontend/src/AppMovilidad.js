@@ -7,8 +7,9 @@ import { signOut } from "firebase/auth";
 import { auth } from "./firebase";
 //import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Footer from "./components/Footer";
-import Inicio from "./inicio";
 import Navbar from "./components/navbar";
+import logo1 from "./images/Icon/Vector6.png";
+import logo2 from "./images/Icon/Vector7.png";
 
 const cookies = new Cookies();
 
@@ -27,32 +28,12 @@ function App() {
   //Chats
   const rooms = [
     {
-      name: "Teconología",
-    },
-    {
-      name: "Tramites y ayudas",
-    },
-    {
-      name: "Banca",
-    },
-    {
-      name: "Tramites médicos",
-    },
-
-    {
-      name: "Compras",
-    },
-    {
-      name: "Pequeñas reparaciones",
-    },
-    {
-      name: "Nutrición y alimentacion",
-    },
-    {
       name: "Transporte",
+      image: logo1,
     },
     {
       name: "Ocio",
+      image: logo2,
     },
   ];
 
@@ -76,19 +57,20 @@ function App() {
             {rooms.map((room, index) => (
               <div className="room-item" key={index}>
                 <button
-                  className="buttonroom"
+                  className="iconChatMo"
                   onClick={() => setRoom(room.name)}
                 >
-                  {room.name}
+                  <img src={room.image} alt={room.name} />
+                  <p>{room.name}</p>
                 </button>
               </div>
             ))}
           </div>
         </div>
       )}
-      <div className="sign-out">
+      {/* <div className="sign-out">
         <button onClick={signUserOut}>Salir</button>
-      </div>
+      </div> */}
 
       <Footer />
     </div>
