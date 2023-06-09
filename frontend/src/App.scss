@@ -1,33 +1,96 @@
-
 .header {
   margin-bottom: 20px;
 }
 .iconChatMo {
-  color: #fff;
-  border: 0.5px solid #ed6054;
-  background-color: #ed6054;
-  border-radius: 10px;
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 23px;
+
+  width: 302px;
+  height: auto;
+
+  background: #fdfdfd;
+  color: black;
+  border: 1px solid #ed6054;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
   margin: auto;
-  cursor: pointer;
-  margin-bottom: 5%;
+  margin-bottom: 10px;
 }
 
 .iconChatMo p {
-  color: black;
   font-size: 20px;
-  padding: 20px;
-  right: 50px;
-  background-color: #fff;
-  margin: 0px;
-  border-bottom-right-radius: 10px;
-  border-top-right-radius: 10px;
 }
 
 .iconChatMo img {
   background-color: #ed6054;
   padding: 10px;
-  border-radius: 16%;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  height: auto;
+  width: 50px;
+}
+
+.botonChatTa {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 23px;
+
+  width: 302px;
+  height: auto;
+
+  background: #fdfdfd;
+  color: black;
+  border: 1px solid #008dae;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.botonChatTa p {
+  font-size: 20px;
+}
+
+.botonChatTa img {
+  background-color: #008dae;
+  padding: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  height: auto;
+  width: 50px;
+}
+
+.botonChatHo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 23px;
+
+  width: 302px;
+  height: auto;
+
+  background: #fdfdfd;
+  color: black;
+  border: 1px solid #ffcd3d;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.botonChatHo img {
+  background-color: #ffcd3d;
+  padding: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  height: auto;
+  width: 50px;
 }
 
 #iconos {

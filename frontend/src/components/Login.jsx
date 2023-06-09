@@ -46,36 +46,38 @@ const Login = () => {
 
             <form>
               <div>
-                <label htmlFor='email-address'>Dirección de email</label>
+                <label htmlFor="email-address">Dirección de email</label>
                 <input
-                  id='email-address'
-                  name='email'
-                  type='email'
+                  id="email-address"
+                  name="email"
+                  type="email"
                   required
-                  placeholder='Email address'
+                  placeholder="Email address"
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
 
               <div>
-                <label htmlFor='password'>Password</label>
+                <label htmlFor="password">Password</label>
                 <input
-                  id='password'
-                  name='password'
-                  type='password'
+                  id="password"
+                  name="password"
+                  type="password"
                   required
-                  placeholder='Password'
+                  placeholder="Password"
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
 
               <div>
-                <button onClick={onLogin}>Login</button>
+                <button className="botonLogin" onClick={onLogin}>
+                  Login
+                </button>
               </div>
             </form>
 
-            <p className='text-sm text-white text-center'>
-              No tienes cuenta? <NavLink to='/signup'>Regístrate</NavLink>
+            <p className="text-sm text-white text-center">
+              No tienes cuenta? <NavLink to="/signup">Regístrate</NavLink>
             </p>
           </div>
         </section>

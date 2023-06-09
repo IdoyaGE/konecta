@@ -57,7 +57,7 @@ function App() {
             {rooms.map((room, index) => (
               <div className="room-item" key={index}>
                 <button
-                  className="buttonroom"
+                  className="iconChatMo"
                   onClick={() => setRoom(room.name)}
                 >
                   <img src={room.image} alt={room.name} />
