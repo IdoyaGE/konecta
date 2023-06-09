@@ -1,5 +1,3 @@
-// start.scss
-
 .container {
   display: flex;
   flex-direction: column;
@@ -40,18 +38,22 @@ h3 {
 
 .botonTramites {
   background-color: #008dae;
+  width:100%;
+  
 }
 
 .botonHogar {
   background-color: #ffcd3d;
+  width:100%
 }
 
 .botonMovilidad {
   background-color: #ed6054;
+  width:100%
 }
 
 .botonInfo {
-  background-color: none;
+  background-color: transparent;
 }
 
 .textoStart {
@@ -60,4 +62,17 @@ h3 {
   margin-top: 10px;
   text-align: center;
   font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .button-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .button-container button {
+    width: 150px;
+    height: 150px;
+  }
 }
