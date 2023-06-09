@@ -71,7 +71,7 @@ function App() {
                   onClick={() => setRoom(room.name)}
                 >
                   <img src={room.image} alt={room.name} />
-                  {room.name}
+                  <p>{room.name}</p>
                 </button>
               </div>
             ))}
