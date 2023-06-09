@@ -8,6 +8,9 @@ import { auth } from "./firebase";
 //import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Footer from "./components/Footer";
 import Navbar from "./components/navbar";
+import logo1 from "./images/Icon/Vector4.png";
+import logo2 from "./images/Icon/Primer_plano.png";
+import logo3 from "./images/Icon/Vector5.png";
 
 const cookies = new Cookies();
 
@@ -27,12 +30,15 @@ function App() {
   const rooms = [
     {
       name: "Compras",
+      image: logo1,
     },
     {
       name: "Pequeñas reparaciones",
+      image: logo2,
     },
     {
       name: "Nutrición y alimentacion",
+      image: logo3,
     },
   ];
 
@@ -59,7 +65,8 @@ function App() {
                   className='buttonroom'
                   onClick={() => setRoom(room.name)}
                 >
-                  {room.name}
+                  <img src={room.image} alt={room.name} />
+                  <p>{room.name}</p>
                 </button>
               </div>
             ))}
