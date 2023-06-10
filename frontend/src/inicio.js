@@ -10,6 +10,7 @@ import Start from "./components/start";
 import Tramites from "./AppTramites";
 import Hogar from "./AppHogar";
 import Movilidad from "./AppMovilidad";
+import Perfil from "./components/userProfile";
 
 function Inicio() {
   const [user, setUser] = useState(null);
@@ -38,6 +39,7 @@ function Inicio() {
             <Route path="/tramites" element={<Tramites />} />
             <Route path="/hogar" element={<Hogar />} />
             <Route path="/movilidad" element={<Movilidad />} />
+            <Route path="/perfil" element={<Perfil />} />
           </Routes>
         </section>
       </div>

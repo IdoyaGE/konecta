@@ -16,21 +16,9 @@ const Login = () => {
         // Signed in
         const user = userCredential.user;
         navigate("/start");
+        console.log(user);
       })
       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorCode, errorMessage);
-      });
-  };
-  const onGoogleLogin = (e) => {
-    e.preventDefault();
-    signInWithPopup(auth, provider)
-      .then((result) => {
-        navigate("/");
-      })
-      .catch((error) => {
-        // Handle Errors here.
         const errorCode = error.code;
         const errorMessage = error.message;
         console.log(errorCode, errorMessage);

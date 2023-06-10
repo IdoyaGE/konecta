@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Navbar from "./navbar";
 
 const UserProfile = () => {
   const [users, setUsers] = useState([]);
@@ -74,65 +75,66 @@ const UserProfile = () => {
 
   return (
     <div>
+      <Navbar />
       <h1>User Profile</h1>
       <form onSubmit={handleSubmit}>
         <input
-          type='text'
-          name='firstName'
+          type="text"
+          name="firstName"
           value={newUser.firstName}
           onChange={handleInputChange}
-          placeholder='Nombre'
+          placeholder="Nombre"
           required
         />
         <input
-          type='text'
-          name='lastName'
+          type="text"
+          name="lastName"
           value={newUser.lastName}
           onChange={handleInputChange}
-          placeholder='Apellido'
+          placeholder="Apellido"
           required
         />
         <input
-          type='text'
-          name='sex'
+          type="text"
+          name="sex"
           value={newUser.sex}
           onChange={handleInputChange}
-          placeholder='Sexo'
+          placeholder="Sexo"
           required
         />
         <input
-          type='number'
-          name='age'
+          type="number"
+          name="age"
           value={newUser.age}
           onChange={handleInputChange}
-          placeholder='Edad'
+          placeholder="Edad"
           required
         />
         <input
-          type='text'
-          name='location'
+          type="text"
+          name="location"
           value={newUser.location}
           onChange={handleInputChange}
-          placeholder='Localidad'
+          placeholder="Localidad"
           required
         />
         <input
-          type='text'
-          name='phone'
+          type="text"
+          name="phone"
           value={newUser.phone}
           onChange={handleInputChange}
-          placeholder='Teléfono'
+          placeholder="Teléfono"
           required
         />
         <input
-          type='file'
-          name='picture'
+          type="file"
+          name="picture"
           onChange={(e) =>
             setNewUser({ ...newUser, picture: e.target.files[0] })
           }
-          accept='image/*'
+          accept="image/*"
         />
-        <button type='submit'>Save</button>
+        <button type="submit">Save</button>
       </form>
       <ul>
         {users.map((user) => (
@@ -160,7 +162,7 @@ const UserProfile = () => {
             {user.picture && (
               <div>
                 <strong>Imagen: </strong>
-                <img src={user.picture} alt='User Profile' />
+                <img src={user.picture} alt="User Profile" />
               </div>
             )}
             <button onClick={() => handleDelete(user._id)}>Borrar</button>
