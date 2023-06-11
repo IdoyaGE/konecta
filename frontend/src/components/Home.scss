@@ -1,31 +1,30 @@
-.container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
+.containerHome {
+  padding-bottom: 200px;
+  height: 100vh;
   font-family: "Raleway", sans-serif;
   text-align: center;
-  background: linear-gradient(30deg, #fff, #29b6d650);
-  background-color: #00726844;
+  background: linear-gradient(0deg, #fff, #29b6d650);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 
-p {
-  margin-bottom: 10px;
-}
-
-h1 {
-  margin-bottom: 10px;
-  color: #009ec3;
-  text-decoration: none;
-}
-
-.botonHOmeL {
+.botonHomeL {
   padding: 10px 20px;
   background-color: #009ec3;
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
   font-family: "Raleway", sans-serif;
+  font-size: 25px;
+}
+
+.botonLoginRHome {
+  color: #009ec3;
+  text-decoration: none;
 }
 
 /* Estilos para dispositivos móviles */

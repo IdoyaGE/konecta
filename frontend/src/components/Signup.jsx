@@ -38,7 +38,7 @@ const Signup = () => {
             <form className="containerRegister">
               <div>
                 <label className="labelRegister" htmlFor="email-address">
-                  Email address
+                  Correo electrónico
                 </label>
                 <input
                   className="inputRegister"
@@ -47,13 +47,13 @@ const Signup = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  placeholder="Email address"
+                  placeholder="Introduce aqui tu correo"
                 />
               </div>
 
               <div>
                 <label className="labelRegister" htmlFor="password">
-                  Password
+                  Contraseña
                 </label>
                 <input
                   className="inputRegister"
@@ -62,7 +62,7 @@ const Signup = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
-                  placeholder="Password"
+                  placeholder="Introce aqui tu contraseña"
                 />
               </div>
 
