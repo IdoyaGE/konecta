@@ -9,7 +9,7 @@ import { auth } from "./firebase";
 import Footer from "./components/Footer";
 import Navbar from "./components/navbar";
 import logo1 from "./images/Icon/Vector6.png";
-import logo2 from "./images/Icon/Vector7.png";
+import logo2 from "./images/Icon/Vector7.png
 
 const cookies = new Cookies();
 
