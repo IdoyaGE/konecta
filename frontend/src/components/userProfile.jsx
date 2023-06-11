@@ -37,10 +37,18 @@ const UserProfile = () => {
     setUserImage("");
 
     axios
-      .post("/add", formData)
-      .then((res) => formData(res.data))
-      .catch((err) => {
-        console.log(err);
+      .post("/enviar", formData)
+      .then(function (response) {
+        if (response.status === 200) {
+          alert("Registrado correctamente");
+          document.getElementById("userProfile").reset(); // Limpiar el formulario
+        } else {
+          throw new Error("Error al registrarte");
+        }
+      })
+      .catch(function (error) {
+        console.error(error);
+        alert("Error al registrarte. Inténtalo de nuevo.");
       });
   };
 

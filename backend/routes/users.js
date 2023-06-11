@@ -14,7 +14,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 // Obtener todos los usuarios
-router.get("/", (req, res) => {
+router.get("/perfil", (req, res) => {
   Users.find()
     .then((user) => res.json(user))
     .catch((err) => res.status(400).json(`Error: ${err}`));
