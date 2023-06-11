@@ -4,15 +4,8 @@
   padding: 20px;
   font-family: "Raleway", sans-serif;
   text-align: center;
-}
-
-.logo {
-  max-width: 200px;
-  margin-bottom: 20px;
-  background-color: #009ec3;
-}
-.answer {
-  color: #009ec3;
+  background: linear-gradient(30deg, #fff, #29b6d650);
+  background-color: #00726844;
 }
 
 p {
@@ -25,7 +18,7 @@ h1 {
   text-decoration: none;
 }
 
-button {
+.botonHOmeL {
   padding: 10px 20px;
   background-color: #009ec3;
   color: #fff;

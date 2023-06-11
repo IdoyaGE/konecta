@@ -2,7 +2,7 @@ import React from "react";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase";
 import { useNavigate } from "react-router-dom";
-import logo from "../images/konectatu.png";
+import logo from "../images/LogoL.png";
 import "./Auth.scss";
 import "./Home.scss";
 
@@ -25,7 +25,7 @@ const Home = ({ user }) => {
     <>
       <nav>
         <div className="container">
-          <img className="logo" src={logo} alt="logo" />
+          <img className="logoInicio" src={logo} alt="logo" />
           <h3 className="answer">¿Necesitas ayuda?</h3>
           <div>
             <p>
@@ -40,9 +40,13 @@ const Home = ({ user }) => {
           </div>
           <div>
             {user ? (
-              <button onClick={handleLogout}>Salir</button>
+              <button className="botonHomeL" onClick={handleLogout}>
+                Salir
+              </button>
             ) : (
-              <button onClick={() => navigate("/login")}>Entrar</button>
+              <button className="botonHomeL" onClick={() => navigate("/login")}>
+                Entrar
+              </button>
             )}
           </div>
         </div>

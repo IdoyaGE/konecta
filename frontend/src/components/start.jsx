@@ -11,28 +11,38 @@ const start = () => {
   return (
     <div>
       <Navbar />
-      <h3>¿En que te podemos ayudar?</h3>
-      <button className='botonTramites'>
-        <NavLink to='/tramites'>
-          <img src={tramitesIcon} alt='tramites' />
-          <h1 className='textoStart'>Tramites</h1>
-        </NavLink>
-      </button>
-      <button className='botonHogar'>
-        <NavLink to='/hogar'>
-          <img src={hogarIcon} alt='hogar' />
-          <h1 className='textoStart'>Hogar</h1>
-        </NavLink>
-      </button>
-      <button className='botonMovilidad'>
-        <NavLink to='/movilidad'>
-          <img src={movilidadIcon} alt='movilidad' />
-          <h1 className='textoStart'>Movilidad</h1>
-        </NavLink>
-      </button>
-      <button className='botonInfo'>
-        <img src={info} alt='info' />
-      </button>
+      <h3>¿En qué podemos ayudarte?</h3>
+      <div className="botonesStart">
+        <button className="botonTramites">
+          <NavLink className="ContenidoStart" to="/tramites">
+            <img
+              className="ContenidoStartI"
+              src={tramitesIcon}
+              alt="tramites"
+            />
+            <h1 className="textoStart">Tramites</h1>
+          </NavLink>
+        </button>
+        <button className="botonHogar">
+          <NavLink to="/hogar">
+            <img className="ContenidoStartI" src={hogarIcon} alt="hogar" />
+            <h1 className="textoStart">Hogar</h1>
+          </NavLink>
+        </button>
+        <button className="botonMovilidad">
+          <NavLink to="/movilidad">
+            <img
+              className="ContenidoStartI"
+              src={movilidadIcon}
+              alt="movilidad"
+            />
+            <h1 className="textoStart">Movilidad</h1>
+          </NavLink>
+        </button>
+        <button className="botonInfo">
+          <img src={info} alt="info" />
+        </button>
+      </div>
     </div>
   );
 };
