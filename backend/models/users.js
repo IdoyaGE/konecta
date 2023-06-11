@@ -14,7 +14,7 @@ const userSchema = new mongoose.Schema({
     required: true,
   },
   age: {
-    type: Number,
+    type: String,
     required: true,
   },
   location: {
@@ -25,8 +25,9 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  picture: {
+  userImage: {
     type: String,
+    required: true,
   },
 });
 

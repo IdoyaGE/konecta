@@ -12,8 +12,17 @@ const getAllUsers = async (req, res) => {
 
 // Crear un nuevo perfil de usuario
 const createUser = async (req, res) => {
-  const { firstName, lastName, sex, age, location, phone } = req.body;
-  const newUser = new User({ firstName, lastName, sex, age, location, phone });
+  const { firstName, lastName, sex, age, location, phone, userImage } =
+    req.body;
+  const newUser = new User({
+    firstName,
+    lastName,
+    sex,
+    age,
+    location,
+    phone,
+    userImage,
+  });
 
   try {
     const user = await newUser.save();
@@ -26,12 +35,13 @@ const createUser = async (req, res) => {
 // Actualizar un perfil de usuario existente
 const updateUser = async (req, res) => {
   const { id } = req.params;
-  const { firstName, lastName, sex, age, location, phone } = req.body;
+  const { firstName, lastName, sex, age, location, phone, userImage } =
+    req.body;
 
   try {
     const user = await User.findByIdAndUpdate(
       id,
-      { firstName, lastName, sex, age, location, phone },
+      { firstName, lastName, sex, age, location, phone, userImage },
       { new: true }
     );
     res.json(user);

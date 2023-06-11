@@ -63,7 +63,8 @@ export const Chat = (props) => {
             key={message.id}
           >
             <span className='user'>
-              <b>{message.user}</b>:<br />
+              <b>{message.user}</b>tú
+              <br />
             </span>
             {message.text}
           </div>
