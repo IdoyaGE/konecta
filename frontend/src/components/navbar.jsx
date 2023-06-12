@@ -16,9 +16,11 @@ const navbar = () => {
       <div className="botonesNav">
         <NavLink className="navPerfil" to="/perfil">
           <img src={perfilIcon} alt="perfil" />
+          {/* <p className="text-navbar">Perfil</p> */}
         </NavLink>
-        <NavLink className="navNoti" to="/notificacion">
+        <NavLink className="navNoti" to="/notificaciones">
           <img src={notificaionIcon} alt="notification" />
+          {/* <p className="text-navbar">Notificaciones</p> */}
         </NavLink>
       </div>
     </div>

@@ -30,11 +30,11 @@ function App() {
   //Chats
   const rooms = [
     {
-      name: "Teconología",
+      name: "Tecnología",
       image: logo1,
     },
     {
-      name: "Tramites y ayudas",
+      name: "Trámites y ayudas",
       image: logo2,
     },
     {
@@ -42,7 +42,7 @@ function App() {
       image: logo3,
     },
     {
-      name: "Tramites médicos",
+      name: "Trámites médicos",
       image: logo4,
     },
   ];

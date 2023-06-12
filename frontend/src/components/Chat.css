@@ -12,14 +12,25 @@
   text-align: center;
 }
 
-.messages {
+.message {
   margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #009ec3;
+  padding: 10px;
+  width: auto;
+  height: auto;
 }
 
-.message {
+.user-message {
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 10px;
+  background-color: none !important;
+  border: none !important;
+  padding: 10px;
+  width: auto;
+  height: auto;
 }
 
 .user {

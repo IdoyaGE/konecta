@@ -33,7 +33,7 @@ function App() {
       image: logo1,
     },
     {
-      name: "Nutrición y alimentacion",
+      name: "Nutrición y alimentación",
       image: logo2,
     },
     {
