@@ -5,10 +5,11 @@ main {
   font-family: "Raleway", sans-serif;
 }
 
-h1 {
-  margin-bottom: 20px;
+.tituloLogin {
   text-align: center;
-  color: #009ec3;
+  color: black;
+  font-size: 30px;
+  margin-top: 20%;
 }
 
 form {
@@ -21,39 +22,41 @@ label {
   margin-bottom: 10px;
 }
 
-input {
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #009ec3;
-  border-radius: 5px;
-  font-family: "Raleway", sans-serif;
-}
-
-.botonLogin {
-  padding: 10px 20px;
-  margin-bottom: 10px;
-  background-color: #009ec3;
-  color: #fff;
+.inputLogin {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px;
+  gap: 10px;
+  width: 287px;
+  height: 10px;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-family: "Raleway", sans-serif;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
 
-.text-sm {
-  font-size: 0.8rem;
+.containerLogin {
+  margin-top: 40%;
 }
 
-.text-white {
-  color: #fff;
+.textoRegister {
+  margin-top: 20px;
+  font-size: 15px;
+  color: black;
 }
 
-.text-center {
-  text-align: center;
-}
-
-a {
+.botonRegisterL {
   color: #009ec3;
+  font-size: 20px;
+  background-color: #ffffff;
+}
+
+.labelLogin {
+  font-size: 20px;
+  color: rgb(0, 0, 0);
 }
 
 /* Estilos para dispositivos móviles */
@@ -66,11 +69,17 @@ a {
 /* Estilos adicionales */
 input::placeholder {
   margin-top: 5px;
-  color: #009ec3;
   font-style: italic;
 }
 
-button + button {
+.botonLogin {
   margin-top: 10px;
   align-self: center;
+  color: #ffffff;
+  background-color: #009ec3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
+  padding: 10px 20px;
 }

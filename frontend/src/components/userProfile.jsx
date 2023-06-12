@@ -55,86 +55,86 @@ const UserProfile = () => {
   return (
     <div>
       <Navbar />
-      <div className='container'>
+      <div className="container">
         <h1>Datos de tu perfil</h1>
-        <form onSubmit={changeOnClick} encType='multipart/form-data'>
-          <div className='form-group'>
-            <label htmlFor='firstName'>Nombre</label>
+        <form onSubmit={changeOnClick} encType="multipart/form-data">
+          <div className="form-group">
+            <label htmlFor="firstName">Nombre</label>
             <input
-              type='text'
+              type="text"
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
-              className='form-control'
-              placeholder='Nombre'
+              className="form-control"
+              placeholder="Nombre"
             />
           </div>
 
-          <div className='form-group'>
-            <label htmlFor='lastName'>Apellido</label>
+          <div className="form-group">
+            <label htmlFor="lastName">Apellido</label>
             <input
-              type='text'
+              type="text"
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
-              className='form-control'
-              placeholder='Apellido'
+              className="form-control"
+              placeholder="Apellido"
             />
           </div>
 
-          <div className='form-group'>
-            <label htmlFor='sex'>Sexo</label>
+          <div className="form-group">
+            <label htmlFor="sex">Sexo</label>
             <input
-              type='text'
+              type="text"
               value={sex}
               onChange={(e) => setSex(e.target.value)}
-              className='form-control'
-              placeholder='Sexo'
+              className="form-control"
+              placeholder="Sexo"
             />
           </div>
 
-          <div className='form-group'>
-            <label htmlFor='age'>Edad</label>
+          <div className="form-group">
+            <label htmlFor="age">Edad</label>
             <input
-              type='text'
+              type="text"
               value={age}
               onChange={(e) => setAge(e.target.value)}
-              className='form-control'
-              placeholder='Edad'
+              className="form-control"
+              placeholder="Edad"
             />
           </div>
 
-          <div className='form-group'>
-            <label htmlFor='location'>Localidad</label>
+          <div className="form-group">
+            <label htmlFor="location">Localidad</label>
             <input
-              type='text'
+              type="text"
               value={location}
               onChange={(e) => setLocation(e.target.value)}
-              className='form-control'
-              placeholder='Localidad'
+              className="form-control"
+              placeholder="Localidad"
             />
           </div>
 
-          <div className='form-group'>
-            <label htmlFor='phone'>Teléfono</label>
+          <div className="form-group">
+            <label htmlFor="phone">Teléfono</label>
             <input
-              type='text'
+              type="text"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
-              className='form-control'
-              placeholder='Teléfono'
+              className="form-control"
+              placeholder="Teléfono"
             />
           </div>
 
-          <div className='form-group'>
-            <label htmlFor='file'>Sube tu foto</label>
+          <div className="form-group">
+            <label htmlFor="file">Sube tu foto</label>
             <input
-              type='file'
-              name='userImage'
-              className='form-control'
+              type="file"
+              name="userImage"
+              className="form-control"
               onChange={onChangeFile}
             />
           </div>
 
-          <button type='submit' className='btn btn-primary'>
+          <button type="submit" className="btn btn-primary">
             Guardar
           </button>
         </form>

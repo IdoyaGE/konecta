@@ -56,11 +56,11 @@ export const Chat = (props) => {
   };
 
   return (
-    <div className='chat-app'>
-      <div className='header'>
+    <div className="chat-app">
+      <div className="header">
         <h3>En este chat te ayudamos con: {room.toUpperCase()}</h3>
       </div>
-      <div className='messages'>
+      <div className="messages">
         {messages.map((message) => (
           <div
             className={`message ${
@@ -70,7 +70,7 @@ export const Chat = (props) => {
             }`}
             key={message.id}
           >
-            <span className='user'>
+            <span className="user">
               <b>{message.user}</b>
               <br />
             </span>
@@ -78,14 +78,14 @@ export const Chat = (props) => {
           </div>
         ))}
       </div>
-      <form onSubmit={handleSubmit} className='new-message-form'>
+      <form onSubmit={handleSubmit} className="new-message-form">
         <input
-          className='new-message-input'
-          placeholder='Escribe un mensaje...'
+          className="new-message-input"
+          placeholder="Escribe un mensaje..."
           onChange={(e) => setNewMessage(e.target.value)}
           value={newMessage}
         />
-        <button type='submit' className='send-button'>
+        <button type="submit" className="send-button">
           Enviar
         </button>
       </form>

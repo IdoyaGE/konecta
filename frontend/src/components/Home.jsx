@@ -1,15 +1,14 @@
 import React from "react";
-import { signOut } from "firebase/auth";
-import { auth } from "../firebase";
-import { useNavigate } from "react-router-dom";
-import logo from "../images/konectatu.png";
-import "./Auth.scss";
+/* import { signOut } from "firebase/auth";
+import { auth } from "../firebase"; */
+import { NavLink, useNavigate } from "react-router-dom";
+import logo from "../images/LogoL.png";
 import "./Home.scss";
 
 const Home = ({ user }) => {
   const navigate = useNavigate();
 
-  const handleLogout = () => {
+  /*   const handleLogout = () => {
     signOut(auth)
       .then(() => {
         // Sign-out successful.
@@ -19,31 +18,29 @@ const Home = ({ user }) => {
       .catch((error) => {
         // An error happened.
       });
-  };
+  }; */
 
   return (
     <>
       <nav>
-        <div className='container'>
-          <img className='logo' src={logo} alt='logo' />
-          <h3 className='answer'>¿Necesitas ayuda?</h3>
+        <div className="containerHome">
+          <img className="logoInicio" src={logo} alt="logo" />
           <div>
-            <p>
-              Conecta con voluntarios que te ayudarán a resolver tus dudas
-              Pueden ayudarte con los recados o simplemente a escucharte
-            </p>
-            <h1>No estás sol@, entre todos nos ayudamos</h1>
-            <p>
-              Apoyo mutuo y preguntas sin temor a ser juzgad@, sintiéndonos
-              valorados y respetados
-            </p>
+            <h4>Estamos aquí para ofrecerte la ayuda que necesitas</h4>
+            <h4>
+              !Registrate ahora y descubre todo lo que podemos hacer port ti!
+            </h4>
           </div>
           <div>
-            {user ? (
-              <button onClick={handleLogout}>Salir</button>
-            ) : (
-              <button onClick={() => navigate("/login")}>Entrar</button>
-            )}
+            <button className="botonHomeL" onClick={() => navigate("/signup")}>
+              Registrate
+            </button>
+            <h4 className="textoLoginHome">
+              Ya tienes una cuenta?{" "}
+              <NavLink className="botonLoginRHome" to="/login">
+                Iniciar Sesión
+              </NavLink>
+            </h4>
           </div>
         </div>
       </nav>

@@ -17,6 +17,7 @@ const Login = () => {
         const user = userCredential.user;
         navigate("/start");
         console.log(user);
+        console.log(user);
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -30,42 +31,54 @@ const Login = () => {
       <main>
         <section>
           <div>
-            <h1>¿Quieres iniciar sesión?</h1>
+            <h1 className="tituloLogin">Iniciar sesión</h1>
 
             <form>
-              <div>
-                <label htmlFor='email-address'>Dirección de email</label>
+              <div className="containerLogin">
+                <label className="labelLogin" htmlFor="email-address">
+                  Correo Electrónico
+                </label>
                 <input
-                  id='email-address'
-                  name='email'
-                  type='email'
+                  className="inputLogin"
+                  id="email-address"
+                  name="email"
+                  type="email"
                   required
-                  placeholder='Email address'
+                  placeholder="Introduce aqui tu correo"
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
 
               <div>
-                <label htmlFor='password'>Password</label>
+                <label className="labelLogin" htmlFor="password">
+                  Password
+                </label>
                 <input
-                  id='password'
-                  name='password'
-                  type='password'
+                  className="inputLogin"
+                  id="password"
+                  name="password"
+                  type="password"
                   required
-                  placeholder='Password'
+                  placeholder="Password"
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
 
               <div>
-                <button className='botonLogin' onClick={onLogin}>
+                <button className="botonLogin" onClick={onLogin}>
+                  Login
+                </button>
+                <button className="botonLogin" onClick={onLogin}>
                   Login
                 </button>
               </div>
             </form>
 
-            <p className='text-sm text-white text-center'>
-              No tienes cuenta? <NavLink to='/signup'>Regístrate</NavLink>
+            <p className="textoRegister">
+              No tienes cuenta?{" "}
+              <NavLink className="botonRegisterL" to="/signup">
+                Regístrate
+              </NavLink>
             </p>
           </div>
         </section>
