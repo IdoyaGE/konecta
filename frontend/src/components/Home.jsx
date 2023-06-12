@@ -1,6 +1,6 @@
 import React from "react";
-import { signOut } from "firebase/auth";
-import { auth } from "../firebase";
+/* import { signOut } from "firebase/auth";
+import { auth } from "../firebase"; */
 import { NavLink, useNavigate } from "react-router-dom";
 import logo from "../images/LogoL.png";
 import "./Home.scss";
@@ -8,7 +8,7 @@ import "./Home.scss";
 const Home = ({ user }) => {
   const navigate = useNavigate();
 
-  const handleLogout = () => {
+  /*   const handleLogout = () => {
     signOut(auth)
       .then(() => {
         // Sign-out successful.
@@ -18,7 +18,7 @@ const Home = ({ user }) => {
       .catch((error) => {
         // An error happened.
       });
-  };
+  }; */
 
   return (
     <>
