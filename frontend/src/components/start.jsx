@@ -51,12 +51,11 @@ const Start = () => {
             <h1 className="textoStart">Movilidad</h1>
           </NavLink>
         </button>
-        <div>
-          <button className="botonInfo" onClick={handleShowModal}>
+        <button className="botonInfo">
+          <NavLink to="/info">
             <img src={info} alt="info" />
-          </button>
-          <Info showModal={showModal} handleCloseModal={handleCloseModal} />
-        </div>
+          </NavLink>
+        </button>
       </div>
     </div>
   );

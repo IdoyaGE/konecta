@@ -1,0 +1,170 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h3 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+  font-family: "Raleway", sans-serif;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* .button-container button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  } */
+
+.button-container button:hover {
+  opacity: 0.8;
+}
+
+.botonTramites {
+  background-color: #008dae;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin-top: 40px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.botonHogar {
+  background-color: #ffcd3d;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
+  padding: 10px 20px;
+  margin-top: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.botonMovilidad {
+  background-color: #ed6054;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.botonInfo {
+  background-color: transparent;
+  margin-top: -80px;
+  border: none;
+  margin-left: 80%;
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
+}
+
+.textoStart {
+  text-decoration: none;
+  color: #fff;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-family: "Raleway", sans-serif;
+}
+
+.botonesStart {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.ContenidoStartI {
+  width: 115px;
+  height: 119px;
+  margin-top: 10px;
+}
+
+.info-info {
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: inset 22.5667px -22.5667px 22.5667px rgba(165, 165, 165, 0.1),
+    inset -22.5667px 22.5667px 22.5667px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(14.894px);
+  border-radius: 5px;
+  position: absolute;
+  left: 6.35%;
+  right: 6.66%;
+  /*   top: 27%;
+  bottom: 8%; */
+  padding-top: 100px;
+  padding-bottom: 100px;
+  text-align: center;
+  margin-top: -680px;
+}
+
+.btn-tlf,
+.btn-sug {
+  color: #ffffff;
+  background-color: #009ec3;
+  font-size: 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
+  padding: 10px 20px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  text-decoration: none;
+}
+
+.btn-salir {
+  color: #ffffff;
+  background-color: #11738a;
+  font-size: 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
+  padding: 10px 20px;
+  margin-top: 50px;
+}
+
+.titulo-dudas,
+.titulo-sug {
+  font-size: 30px;
+  color: black;
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 30px;
+}
+@media (max-width: 768px) {
+  .button-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .button-container button {
+    width: 150px;
+    height: 150px;
+  }
+}

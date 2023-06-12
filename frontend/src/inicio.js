@@ -12,6 +12,7 @@ import Hogar from "./AppHogar";
 import Movilidad from "./AppMovilidad";
 import Perfil from "./components/userProfile";
 import Notificaciones from "./components/Notificaciones";
+import Info from "./components/Info";
 
 function Inicio() {
   const [user, setUser] = useState(null);
@@ -42,6 +43,7 @@ function Inicio() {
             <Route path="/movilidad" element={<Movilidad />} />
             <Route path="/perfil" element={<Perfil />} />
             <Route path="/notificaciones" element={<Notificaciones />} />
+            <Route path="/info" element={<Info />} />
           </Routes>
         </section>
       </div>
