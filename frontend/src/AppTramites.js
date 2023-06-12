@@ -30,11 +30,11 @@ function App() {
   //Chats
   const rooms = [
     {
-      name: "Teconología",
+      name: "Tecnología",
       image: logo1,
     },
     {
-      name: "Tramites y ayudas",
+      name: "Trámites y ayudas",
       image: logo2,
     },
     {
@@ -42,7 +42,7 @@ function App() {
       image: logo3,
     },
     {
-      name: "Tramites médicos",
+      name: "Trámites médicos",
       image: logo4,
     },
   ];
@@ -62,12 +62,15 @@ function App() {
         <Chat room={room} />
       ) : (
         <div className='room'>
-          <h2> Estás en la categoría Trámites ¿En qué te podemos ayudar? </h2>
+          <h2>
+            {" "}
+            Estás en la categoría de Trámites ¿En qué te podemos ayudar?{" "}
+          </h2>
           <div className='room-list'>
             {rooms.map((room, index) => (
               <div className='room-item' key={index}>
                 <button
-                  className='buttonroom'
+                  className='botonChatTa'
                   onClick={() => setRoom(room.name)}
                 >
                   <img src={room.image} alt={room.name} />

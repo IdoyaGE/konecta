@@ -11,6 +11,7 @@ import Tramites from "./AppTramites";
 import Hogar from "./AppHogar";
 import Movilidad from "./AppMovilidad";
 import Perfil from "./components/userProfile";
+import Notificaciones from "./components/Notificaciones";
 
 function Inicio() {
   const [user, setUser] = useState(null);
@@ -40,6 +41,7 @@ function Inicio() {
             <Route path='/hogar' element={<Hogar />} />
             <Route path='/movilidad' element={<Movilidad />} />
             <Route path='/perfil' element={<Perfil />} />
+            <Route path='/notificaciones' element={<Notificaciones />} />
           </Routes>
         </section>
       </div>

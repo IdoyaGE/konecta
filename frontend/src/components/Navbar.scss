@@ -1,15 +1,8 @@
 // Navbar.scss
 
 .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  font-family: "Raleway", sans-serif;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 10px;
 }
 
 h1 {
@@ -23,24 +16,29 @@ h1 a {
   font-size: 50px;
 }
 
-.navbar img {
-  width: 18px;
-  height: 18px;
-  margin-left: 10px;
+.botonesNav {
+  margin-top: -60px;
+  margin-bottom: 50px;
+  text-align: right;
+  padding-bottom: 20px;
 }
 
-.img-perfil {
-  width: 24px;
-  height: 24px;
+.navPerfil,
+.navNoti {
+  margin-right: 30px;
+  height: auto;
+  width: auto;
 }
 
-.img-campana {
-  width: 18px;
-  height: 18px;
+.logoNav {
+  width: 102px;
+  height: 48.47px;
+  margin-top: 20px;
+  padding-bottom: 20px;
 }
 
 .botonesNav {
-  margin-top: -50px;
+  margin-top: -70px;
   margin-bottom: 50px;
   text-align: right;
 }
@@ -52,9 +50,19 @@ h1 a {
   width: auto;
 }
 
+.text-navbar {
+  text-decoration: none;
+  color: black;
+  text-align: right;
+  font-family: "Raleway", sans-serif;
+  margin-top: -30px;
+}
+
 /* Estilos para dispositivos móviles */
 @media only screen and (max-width: 600px) {
   .navbar {
-    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
   }
 }

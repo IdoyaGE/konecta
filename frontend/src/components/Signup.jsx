@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
+import "./Signup.scss";
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -33,39 +34,52 @@ const Signup = () => {
       <section>
         <div>
           <div>
-            <h1> Registro </h1>
-            <form>
+            <h1 className='tituloRegister'> Registro </h1>
+            <form className='containerRegister'>
               <div>
-                <label htmlFor='email-address'>Email address</label>
+                <label className='labelRegister' htmlFor='email-address'>
+                  Correo electrónico
+                </label>
                 <input
+                  className='inputRegister'
                   type='email'
                   label='Email address'
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  placeholder='Email address'
+                  placeholder='Introduce tu correo electrónico'
                 />
               </div>
 
               <div>
-                <label htmlFor='password'>Password</label>
+                <label className='labelRegister' htmlFor='password'>
+                  Contraseña
+                </label>
                 <input
+                  className='inputRegister'
                   type='password'
                   label='Create password'
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
-                  placeholder='Password'
+                  placeholder='Introduce tu contraseña'
                 />
               </div>
 
-              <button type='submit' onClick={onSubmit}>
-                Entra
+              <button
+                className='botonRegister'
+                type='submit'
+                onClick={onSubmit}
+              >
+                Regístrate
               </button>
             </form>
 
-            <p>
-              No tienes cuenta? <NavLink to='/login'>Regístrate</NavLink>
+            <p className='textoLogin'>
+              ¿Ya tienes cuenta?{" "}
+              <NavLink className='botonLoginR' to='/login'>
+                Iniciar Sesión
+              </NavLink>
             </p>
           </div>
         </div>

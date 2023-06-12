@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Navbar from "./navbar";
+import "./userProfile.scss";
 
 const UserProfile = () => {
   const [firstName, setFirstName] = useState("");
@@ -59,7 +60,7 @@ const UserProfile = () => {
         <h1>Datos de tu perfil</h1>
         <form onSubmit={changeOnClick} encType='multipart/form-data'>
           <div className='form-group'>
-            <label htmlFor='firstName'>Nombre</label>
+            <label htmlFor='firstName'></label>
             <input
               type='text'
               value={firstName}
@@ -70,7 +71,7 @@ const UserProfile = () => {
           </div>
 
           <div className='form-group'>
-            <label htmlFor='lastName'>Apellido</label>
+            <label htmlFor='lastName'></label>
             <input
               type='text'
               value={lastName}
@@ -81,7 +82,7 @@ const UserProfile = () => {
           </div>
 
           <div className='form-group'>
-            <label htmlFor='sex'>Sexo</label>
+            <label htmlFor='sex'></label>
             <input
               type='text'
               value={sex}
@@ -92,7 +93,7 @@ const UserProfile = () => {
           </div>
 
           <div className='form-group'>
-            <label htmlFor='age'>Edad</label>
+            <label htmlFor='age'></label>
             <input
               type='text'
               value={age}
@@ -103,7 +104,7 @@ const UserProfile = () => {
           </div>
 
           <div className='form-group'>
-            <label htmlFor='location'>Localidad</label>
+            <label htmlFor='location'></label>
             <input
               type='text'
               value={location}
@@ -114,7 +115,7 @@ const UserProfile = () => {
           </div>
 
           <div className='form-group'>
-            <label htmlFor='phone'>Teléfono</label>
+            <label htmlFor='phone'></label>
             <input
               type='text'
               value={phone}

@@ -33,7 +33,7 @@ router.post("/add", upload.single("userImage"), (req, res) => {
   });
   newUser
     .save()
-    .then(() => res.json("Ya estás registrado"))
+    .then(() => res.json("El usuario ya está registrado"))
     .catch((err) => res.status(400).json(`Error: ${err}`));
 });
 
@@ -51,7 +51,7 @@ router.put("/update/:id", upload.single("userImage"), (req, res) => {
 
       user
         .save()
-        .then(() => res.json("Ya está actualizado"))
+        .then(() => res.json("El usuario ya está actualizado"))
         .catch((err) => res.status(400).json(`Error: ${err}`));
     })
     .catch((err) => res.status(400).json(`Error: ${err}`));

@@ -1,0 +1,54 @@
+.tituloRegister {
+  text-align: center;
+  color: black;
+  font-size: 30px;
+  margin-top: 20%;
+}
+
+.inputRegister {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px;
+  gap: 10px;
+  width: 287px;
+  height: 10px;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.containerRegister {
+  margin-top: 40%;
+}
+
+.labelRegister {
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+}
+
+.botonRegister {
+  color: #ffffff;
+  background-color: #009ec3;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
+  padding: 10px 20px;
+}
+
+.textoLogin {
+  margin-top: 20px;
+  font-size: 15px;
+  color: black;
+}
+
+.botonLoginR {
+  color: #009ec3;
+  font-size: 20px;
+  background-color: #ffffff;
+}
