@@ -40,7 +40,7 @@ const Home = ({ user }) => {
           </div>
           <div>
             {user ? (
-              <button onClick={handleLogout}>Entrar</button>
+              <button onClick={handleLogout}>Salir</button>
             ) : (
               <button onClick={() => navigate("/login")}>Entrar</button>
             )}
