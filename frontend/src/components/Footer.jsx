@@ -1,8 +1,8 @@
 //Importo React, las imágenes y el estilo CSS
 import React from "react";
-import img7 from "../images/fb.jpg";
-import img8 from "../images/inst.jpg";
-import img10 from "../images/tw.jpg";
+import img7 from "../images/fb.png";
+import img8 from "../images/inst.png";
+import img10 from "../images/tw.png";
 import "./Footer.css";
 import logoBizkaia from "../images/Icon/Ellipse 15.png";
 import logoEuro from "../images/Icon/Ellipse 19.png";

@@ -1,174 +1,144 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import Navbar from "./navbar";
 
 const UserProfile = () => {
-  const [users, setUsers] = useState([]);
-  const [newUser, setNewUser] = useState({
-    firstName: "",
-    lastName: "",
-    sex: "",
-    age: "",
-    location: "",
-    phone: "",
-    picture: "",
-  });
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [sex, setSex] = useState("");
+  const [age, setAge] = useState("");
+  const [location, setLocation] = useState("");
+  const [phone, setPhone] = useState("");
+  const [userImage, setUserImage] = useState("");
 
-  useEffect(() => {
-    getUsers();
-  }, []);
-
-  const getUsers = async () => {
-    try {
-      const response = await axios.get("/api/users");
-      setUsers(response.data);
-    } catch (error) {
-      console.error(error);
-    }
+  const onChangeFile = (e) => {
+    setUserImage(e.target.files[0]);
   };
 
-  const handleInputChange = (e) => {
-    setNewUser({ ...newUser, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e) => {
+  const changeOnClick = (e) => {
     e.preventDefault();
-    try {
-      const formData = new FormData();
-      formData.append("firstName", newUser.firstName);
-      formData.append("lastName", newUser.lastName);
-      formData.append("sex", newUser.sex);
-      formData.append("age", newUser.age);
-      formData.append("location", newUser.location);
-      formData.append("phone", newUser.phone);
-      formData.append("picture", newUser.picture);
 
-      await axios.post("/api/users", formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
+    const formData = new FormData();
+
+    formData.append("firstName", firstName);
+    formData.append("lastName", lastName);
+    formData.append("sex", sex);
+    formData.append("age", age);
+    formData.append("location", location);
+    formData.append("phone", phone);
+    formData.append("userImage", userImage);
+
+    setFirstName("");
+    setLastName("");
+    setSex("");
+    setAge("");
+    setLocation("");
+    setPhone("");
+    setUserImage("");
+
+    axios
+      .post("/enviar", formData)
+      .then(function (response) {
+        if (response.status === 200) {
+          alert("Registrado correctamente");
+          document.getElementById("userProfile").reset(); // Limpiar el formulario
+        } else {
+          throw new Error("Error al registrarte");
+        }
+      })
+      .catch(function (error) {
+        console.error(error);
+        alert("Error al registrarte. Inténtalo de nuevo.");
       });
-
-      getUsers();
-      setNewUser({
-        firstName: "",
-        lastName: "",
-        sex: "",
-        age: "",
-        location: "",
-        phone: "",
-        picture: "",
-      });
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
-  const handleDelete = async (id) => {
-    try {
-      await axios.delete(`/api/users/${id}`);
-      getUsers();
-    } catch (error) {
-      console.error(error);
-    }
   };
 
   return (
     <div>
       <Navbar />
-      <h1>User Profile</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="firstName"
-          value={newUser.firstName}
-          onChange={handleInputChange}
-          placeholder="Nombre"
-          required
-        />
-        <input
-          type="text"
-          name="lastName"
-          value={newUser.lastName}
-          onChange={handleInputChange}
-          placeholder="Apellido"
-          required
-        />
-        <input
-          type="text"
-          name="sex"
-          value={newUser.sex}
-          onChange={handleInputChange}
-          placeholder="Sexo"
-          required
-        />
-        <input
-          type="number"
-          name="age"
-          value={newUser.age}
-          onChange={handleInputChange}
-          placeholder="Edad"
-          required
-        />
-        <input
-          type="text"
-          name="location"
-          value={newUser.location}
-          onChange={handleInputChange}
-          placeholder="Localidad"
-          required
-        />
-        <input
-          type="text"
-          name="phone"
-          value={newUser.phone}
-          onChange={handleInputChange}
-          placeholder="Teléfono"
-          required
-        />
-        <input
-          type="file"
-          name="picture"
-          onChange={(e) =>
-            setNewUser({ ...newUser, picture: e.target.files[0] })
-          }
-          accept="image/*"
-        />
-        <button type="submit">Save</button>
-      </form>
-      <ul>
-        {users.map((user) => (
-          <li key={user._id}>
-            <div>
-              <strong>Nombre y Apellido: </strong>
-              {user.firstName} {user.lastName}
-            </div>
-            <div>
-              <strong>Sexo: </strong>
-              {user.sex}
-            </div>
-            <div>
-              <strong>Edad: </strong>
-              {user.age}
-            </div>
-            <div>
-              <strong>Localidad: </strong>
-              {user.location}
-            </div>
-            <div>
-              <strong>Teléfono: </strong>
-              {user.phone}
-            </div>
-            {user.picture && (
-              <div>
-                <strong>Imagen: </strong>
-                <img src={user.picture} alt="User Profile" />
-              </div>
-            )}
-            <button onClick={() => handleDelete(user._id)}>Borrar</button>
-          </li>
-        ))}
-      </ul>
+      <div className="container">
+        <h1>Datos de tu perfil</h1>
+        <form onSubmit={changeOnClick} encType="multipart/form-data">
+          <div className="form-group">
+            <label htmlFor="firstName">Nombre</label>
+            <input
+              type="text"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+              className="form-control"
+              placeholder="Nombre"
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="lastName">Apellido</label>
+            <input
+              type="text"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+              className="form-control"
+              placeholder="Apellido"
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="sex">Sexo</label>
+            <input
+              type="text"
+              value={sex}
+              onChange={(e) => setSex(e.target.value)}
+              className="form-control"
+              placeholder="Sexo"
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="age">Edad</label>
+            <input
+              type="text"
+              value={age}
+              onChange={(e) => setAge(e.target.value)}
+              className="form-control"
+              placeholder="Edad"
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="location">Localidad</label>
+            <input
+              type="text"
+              value={location}
+              onChange={(e) => setLocation(e.target.value)}
+              className="form-control"
+              placeholder="Localidad"
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="phone">Teléfono</label>
+            <input
+              type="text"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              className="form-control"
+              placeholder="Teléfono"
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="file">Sube tu foto</label>
+            <input
+              type="file"
+              name="userImage"
+              className="form-control"
+              onChange={onChangeFile}
+            />
+          </div>
+
+          <button type="submit" className="btn btn-primary">
+            Guardar
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

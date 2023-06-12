@@ -1,33 +1,28 @@
 version: "3"
 services:
-  mongo:
-    image: mongo:latest
-    container_name: mongo-konecta
-    restart: always
-    environment:
-      MONGO_INITDB_DATABASE: konecta
-    ports:
-      - "27022:27017"
-    volumes:
-      - ~/konecta/mongo:/data/db
-    networks:
-      - konecta
-
   backend:
     build: ./backend
+    restart: always
+    container_name: backend-konekta2
     ports:
-      - 3022:3000
+      - "3022:3000"
     depends_on:
       - mongo
-    networks:
-      - konecta
+
   frontend:
     build: ./frontend
+    restart: always
+    container_name: frontend-konekta2
     ports:
-      - 80:80
+      - "80:80"
     depends_on:
       - mongo
-    networks:
-      - konecta
-networks:
-  silvereconomy:
+
+  mongo:
+    image: mongo
+    container_name: mongo-konekta2
+    restart: always
+    ports:
+      - "27022:27017"
+    environment:
+      MONGO_INITDB_DATABASE: konekta2

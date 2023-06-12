@@ -17,6 +17,7 @@ const Login = () => {
         const user = userCredential.user;
         navigate("/start");
         console.log(user);
+        console.log(user);
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -64,6 +65,9 @@ const Login = () => {
               </div>
 
               <div>
+                <button className="botonLogin" onClick={onLogin}>
+                  Login
+                </button>
                 <button className="botonLogin" onClick={onLogin}>
                   Login
                 </button>

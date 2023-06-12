@@ -37,6 +37,19 @@ h1 a {
   padding-bottom: 20px;
 }
 
+.botonesNav {
+  margin-top: -50px;
+  margin-bottom: 50px;
+  text-align: right;
+}
+
+.navPerfil,
+.navNoti {
+  margin-right: 30px;
+  height: auto;
+  width: auto;
+}
+
 /* Estilos para dispositivos móviles */
 @media only screen and (max-width: 600px) {
   .navbar {
