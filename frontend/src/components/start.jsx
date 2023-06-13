@@ -23,7 +23,7 @@ const Start = () => {
   return (
     <div>
       <Navbar />
-      <h3>¿En qué podemos ayudarte?</h3>
+      <h1 className="titulo-start">¿En qué podemos ayudarte?</h1>
       <div className="botonesStart">
         <button className="botonTramites">
           <NavLink className="ContenidoStart" to="/tramites">

@@ -8,7 +8,7 @@ import "./Navbar.scss";
 const navbar = () => {
   return (
     <div className="navbar">
-      <h1>
+      <h1 className="logo-nav">
         <NavLink to="/start">
           <img className="logoNav" src={LogoNav} alt="LogoNav" />
         </NavLink>

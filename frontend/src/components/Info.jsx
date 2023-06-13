@@ -11,7 +11,7 @@ const Info = () => {
   return (
     <div>
       <Navbar />
-      <h3>¿En qué podemos ayudarte?</h3>
+      <h1 className="textoInfo">¿En qué podemos ayudarte?</h1>
       <div className="botonesStart">
         <button className="botonTramites">
           <img className="ContenidoStartI" src={tramitesIcon} alt="tramites" />
