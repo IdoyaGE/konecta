@@ -24,39 +24,36 @@ const Start = () => {
     <div>
       <Navbar />
       <h3>¿En qué podemos ayudarte?</h3>
-      <div className='botonesStart'>
-        <button className='botonTramites'>
-          <NavLink className='ContenidoStart' to='/tramites'>
+      <div className="botonesStart">
+        <button className="botonTramites">
+          <NavLink className="ContenidoStart" to="/tramites">
             <img
-              className='ContenidoStartI'
+              className="ContenidoStartI"
               src={tramitesIcon}
-              alt='tramites'
+              alt="tramites"
             />
-            <h1 className='textoStart'>Trámites</h1>
+            <h1 className="textoStart">Tramites</h1>
           </NavLink>
         </button>
-        <button className='botonHogar'>
-          <NavLink to='/hogar'>
-            <img className='ContenidoStartI' src={hogarIcon} alt='hogar' />
-            <h1 className='textoStart'>Hogar</h1>
+        <button className="botonHogar">
+          <NavLink to="/hogar">
+            <img className="ContenidoStartI" src={hogarIcon} alt="hogar" />
+            <h1 className="textoStart">Hogar</h1>
           </NavLink>
         </button>
-        <button className='botonMovilidad'>
-          <NavLink to='/movilidad'>
+        <button className="botonMovilidad">
+          <NavLink to="/movilidad">
             <img
-              className='ContenidoStartI'
+              className="ContenidoStartI"
               src={movilidadIcon}
-              alt='movilidad'
+              alt="movilidad"
             />
-            <h1 className='textoStart'>Movilidad</h1>
+            <h1 className="textoStart">Movilidad</h1>
           </NavLink>
         </button>
-        <div>
-          <button className='botonInfo' onClick={handleShowModal}>
-            <img src={info} alt='info' />
-          </button>
-          <Info showModal={showModal} handleCloseModal={handleCloseModal} />
-        </div>
+        <button className="botonInfo">
+          <img src={info} alt="info" />
+        </button>
       </div>
     </div>
   );

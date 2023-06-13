@@ -33,15 +33,15 @@ function Inicio() {
         <section>
           <Routes>
             {"/"}
-            <Route path='/' element={<Home user={user} />} />
-            <Route path='/start' element={<Start user={user} />} />
-            <Route path='/signup' element={<Signup />} />
-            <Route path='/login' element={<Login />} />
-            <Route path='/tramites' element={<Tramites />} />
-            <Route path='/hogar' element={<Hogar />} />
-            <Route path='/movilidad' element={<Movilidad />} />
-            <Route path='/perfil' element={<Perfil />} />
-            <Route path='/notificaciones' element={<Notificaciones />} />
+            <Route path="/" element={<Home user={user} />} />
+            <Route path="/start" element={<Start user={user} />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/tramites" element={<Tramites />} />
+            <Route path="/hogar" element={<Hogar />} />
+            <Route path="/movilidad" element={<Movilidad />} />
+            <Route path="/perfil" element={<Perfil />} />
+            <Route path="/notificaciones" element={<Notificaciones />} />
           </Routes>
         </section>
       </div>

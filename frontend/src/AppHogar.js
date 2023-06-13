@@ -59,10 +59,11 @@ function App() {
         <div className='room'>
           <h2>Estás en la categoría de HOGAR ¿En qué te podemos ayudar? </h2>
           <div className='room-list'>
+
             {rooms.map((room, index) => (
-              <div className='room-item' key={index}>
+              <div className="room-item" key={index}>
                 <button
-                  className='botonChatHo'
+                  className="botonChatHo"
                   onClick={() => setRoom(room.name)}
                 >
                   <img src={room.image} alt={room.name} />
