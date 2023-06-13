@@ -56,95 +56,95 @@ const UserProfile = () => {
   return (
     <div>
       <Navbar />
-      <div className="containerUserProfile">
-        <h1 className="titulo-userProfile">Datos de tu perfil</h1>
-        <form onSubmit={changeOnClick} encType="multipart/form-data">
-          <div className="form-group">
-            <label htmlFor="firstName">
+      <div className='containerUserProfile'>
+        <h1 className='titulo-userProfile'>Datos de tu perfil</h1>
+        <form onSubmit={changeOnClick} encType='multipart/form-data'>
+          <div className='form-group'>
+            <label htmlFor='firstName'>
               <b>Nombre</b>
             </label>
             <input
-              type="text"
+              type='text'
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
-              className="form-control"
-              placeholder="Nombre"
+              className='form-control'
+              placeholder='Nombre'
             />
           </div>
-          <div className="form-group">
-            <label htmlFor="lastName">
+          <div className='form-group'>
+            <label htmlFor='lastName'>
               <b>Apellido</b>
             </label>
             <input
-              type="text"
+              type='text'
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
-              className="form-control"
-              placeholder="Apellido"
+              className='form-control'
+              placeholder='Apellido'
             />
           </div>
-          <div className="form-group">
-            <label htmlFor="sex">
+          <div className='form-group'>
+            <label htmlFor='sex'>
               <b>Sexo</b>
             </label>
-            <select name="sexo" className="form-control1">
-              <option value="sexoHombre" selected>
+            <select name='sexo' className='form-control1'>
+              <option value='sexoHombre' selected>
                 Hombre
               </option>
-              <option value="sexoMujer">Mujer</option>
-              <option value="sexoOtro">Otros</option>
+              <option value='sexoMujer'>Mujer</option>
+              <option value='sexoOtro'>Otros</option>
             </select>
           </div>
-          <div className="form-group">
-            <label htmlFor="age">
+          <div className='form-group'>
+            <label htmlFor='age'>
               <b>Edad</b>
             </label>
             <input
-              type="text"
+              type='text'
               value={age}
               onChange={(e) => setAge(e.target.value)}
-              className="form-control"
-              placeholder="Edad"
+              className='form-control'
+              placeholder='Edad'
             />
           </div>
-          <div className="form-group">
-            <label htmlFor="location">
+          <div className='form-group'>
+            <label htmlFor='location'>
               <b>Localidad</b>
             </label>
             <input
-              type="text"
+              type='text'
               value={location}
               onChange={(e) => setLocation(e.target.value)}
-              className="form-control"
-              placeholder="Localidad"
+              className='form-control'
+              placeholder='Localidad'
             />
           </div>
-          <div className="form-group">
-            <label htmlFor="phone">
+          <div className='form-group'>
+            <label htmlFor='phone'>
               <b>Teléfono</b>
             </label>
             <input
-              type="text"
+              type='text'
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
-              className="form-control"
-              placeholder="Teléfono"
+              className='form-control'
+              placeholder='Teléfono'
             />
           </div>
 
-          <div className="form-group">
-            <label htmlFor="file">
+          <div className='form-group'>
+            <label htmlFor='file'>
               <b>Sube tu foto</b>
             </label>
             <input
-              type="file"
-              name="userImage"
-              className="form-control"
+              type='file'
+              name='userImage'
+              className='form-control'
               onChange={onChangeFile}
             />
           </div>
 
-          <button type="submit" className="btn-userProfile">
+          <button type='submit' className='btn-userProfile'>
             Guardar
           </button>
         </form>

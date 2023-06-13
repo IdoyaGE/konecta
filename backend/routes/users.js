@@ -1,6 +1,6 @@
 import express from "express";
 import multer from "multer";
-import Users from "../models/users.js";
+import User from "../models/users.js";
 
 const router = express.Router();
 const storage = multer.diskStorage({
@@ -15,14 +15,14 @@ const upload = multer({ storage: storage });
 
 // Obtener todos los usuarios
 router.get("/perfil", (req, res) => {
-  Users.find()
+  User.find()
     .then((users) => res.json(users))
-    .catch((err) => res.status(400).json(`Error: ${err}`));
+    .catch((err) => res.status(500).json({ error: `Error: ${err}` }));
 });
 
 // Crear un nuevo usuario
 router.post("/add", upload.single("userImage"), (req, res) => {
-  const newUser = new Users({
+  const newUser = new User({
     firstName: req.body.firstName,
     lastName: req.body.lastName,
     sex: req.body.sex,
@@ -33,13 +33,15 @@ router.post("/add", upload.single("userImage"), (req, res) => {
   });
   newUser
     .save()
-    .then(() => res.json("El usuario ya está registrado"))
-    .catch((err) => res.status(400).json(`Error: ${err}`));
+    .then(() =>
+      res.status(201).json("El usuario ha sido registrado exitosamente")
+    )
+    .catch((err) => res.status(400).json({ error: `Error: ${err}` }));
 });
 
 // Actualizar un usuario existente
 router.put("/update/:id", upload.single("userImage"), (req, res) => {
-  Users.findById(req.params.id)
+  User.findById(req.params.id)
     .then((user) => {
       user.firstName = req.body.firstName;
       user.lastName = req.body.lastName;
@@ -51,17 +53,17 @@ router.put("/update/:id", upload.single("userImage"), (req, res) => {
 
       user
         .save()
-        .then(() => res.json("El usuario ya está actualizado"))
-        .catch((err) => res.status(400).json(`Error: ${err}`));
+        .then(() => res.json("El usuario ha sido actualizado exitosamente"))
+        .catch((err) => res.status(400).json({ error: `Error: ${err}` }));
     })
-    .catch((err) => res.status(400).json(`Error: ${err}`));
+    .catch((err) => res.status(400).json({ error: `Error: ${err}` }));
 });
 
 // Borrar un usuario existente
 router.delete("/delete/:id", (req, res) => {
-  Users.findByIdAndDelete(req.params.id)
+  User.findByIdAndDelete(req.params.id)
     .then(() => res.json("Usuario eliminado correctamente"))
-    .catch((err) => res.status(400).json(`Error: ${err}`));
+    .catch((err) => res.status(400).json({ error: `Error: ${err}` }));
 });
 
-export default Users;
+export default router;

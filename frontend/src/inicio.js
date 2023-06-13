@@ -10,7 +10,7 @@ import Start from "./components/start";
 import Tramites from "./AppTramites";
 import Hogar from "./AppHogar";
 import Movilidad from "./AppMovilidad";
-import Perfil from "./components/userProfile";
+import Perfil from "./components/Formulario";
 import Notificaciones from "./components/Notificaciones";
 import Info from "./components/Info";
 
