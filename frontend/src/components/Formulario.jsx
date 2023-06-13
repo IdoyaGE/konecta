@@ -1,35 +1,55 @@
 import React, { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import "./Formulario.scss";
 
 const Formulario = () => {
   const [formularioEnviado, cambiarFormularioEnviado] = useState(false);
+
   return (
     <>
       <Formik
         initialValues={{
           nombre: "",
-          correo: "",
+          apellido: "",
+          localidad: "",
+          nacimiento: "",
+          telefono: "",
         }}
         validate={(valores) => {
           let errores = {};
 
           // Validacion nombre
           if (!valores.nombre) {
-            errores.nombre = "Por favor ingresa un nombre";
+            errores.nombre = "Por favor introduce tu nombre";
           } else if (!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(valores.nombre)) {
             errores.nombre = "El nombre solo puede contener letras y espacios";
           }
-
-          // Validacion correo
-          if (!valores.correo) {
-            errores.correo = "Por favor ingresa un correo electronico";
-          } else if (
-            !/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(
-              valores.correo
-            )
-          ) {
-            errores.correo =
-              "El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.";
+          // Validacion apellido
+          if (!valores.apellido) {
+            errores.apellido = "Por favor introduce tu primer apellido";
+          } else if (!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(valores.apellido)) {
+            errores.nombre =
+              "El apellido solo puede contener letras y espacios";
+          }
+          // Validacion localidad
+          if (!valores.localidad) {
+            errores.localidad = "Por favor introduce tu localidad";
+          } else if (!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(valores.localidad)) {
+            errores.localidad =
+              "El apellido solo puede contener letras y espacios";
+          }
+          //Validación año de nacimiento
+          if (!valores.nacimiento) {
+            errores.nacimiento = "Por favor introduce tu año de nacimiento";
+          } else if (!/^\d{4}$/.test(valores.nacimiento)) {
+            errores.nacimiento = "El año de nacimiento debe tener 4 números";
+          }
+          //Validación teléfono
+          if (!valores.telefono) {
+            errores.telefono = "Por favor introduce tu móvil";
+          } else if (!/^\d{9}$/.test(valores.telefono)) {
+            errores.telefono =
+              "El número de teléfono debe tener 9 dígitos numéricos";
           }
 
           return errores;
@@ -49,7 +69,7 @@ const Formulario = () => {
                 type='text'
                 id='nombre'
                 name='nombre'
-                placeholder='John Doe'
+                placeholder='Nombre'
               />
               <ErrorMessage
                 name='nombre'
@@ -57,25 +77,60 @@ const Formulario = () => {
               />
             </div>
             <div>
-              <label htmlFor='correo'>Correo</label>
+              <label htmlFor='Apellido'>Apellido</label>
               <Field
                 type='text'
-                id='correo'
-                name='correo'
-                placeholder='correo@correo.com'
+                id='apellido'
+                name='apellido'
+                placeholder='apellido'
               />
               <ErrorMessage
-                name='correo'
-                component={() => <div className='error'>{errors.correo}</div>}
+                name='apellido'
+                component={() => <div className='error'>{errors.apellido}</div>}
               />
             </div>
-
             <div>
-              <Field name='pais' as='select'>
-                <option value='mexico'>Mexico</option>
-                <option value='España'>España</option>
-                <option value='Argentina'>Argentina</option>
-              </Field>
+              <label htmlFor='localidad'>Localidad</label>
+              <Field
+                type='text'
+                id='localidad'
+                name='localidad'
+                placeholder='Localidad'
+              />
+              <ErrorMessage
+                name='localidad'
+                component={() => (
+                  <div className='error'>{errors.localidad}</div>
+                )}
+              />
+            </div>
+            <div>
+              <label htmlFor='nacimiento'>Año de nacimiento</label>
+              <Field
+                type='text'
+                id='nacimiento'
+                name='nacimiento'
+                placeholder='Año de nacimiento'
+              />
+              <ErrorMessage
+                name='nacimiento'
+                component={() => (
+                  <div className='error'>{errors.nacimiento}</div>
+                )}
+              />
+            </div>
+            <div>
+              <label htmlFor='telefono'>Móvil</label>
+              <Field
+                type='text'
+                id='telefono'
+                name='telefono'
+                placeholder='Móvil'
+              />
+              <ErrorMessage
+                name='telefono'
+                component={() => <div className='error'>{errors.telefono}</div>}
+              />
             </div>
 
             <div>
@@ -85,10 +140,9 @@ const Formulario = () => {
               <label>
                 <Field type='radio' name='sexo' value='mujer' /> Mujer
               </label>
-            </div>
-
-            <div>
-              <Field name='mensaje' as='textarea' placeholder='Mensaje' />
+              <label>
+                <Field type='radio' name='sexo' value='otros' /> Otros
+              </label>
             </div>
 
             <button type='submit'>Enviar</button>

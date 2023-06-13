@@ -11,44 +11,44 @@ const Info = () => {
   return (
     <div>
       <Navbar />
-      <h1 className="textoInfo">¿En qué podemos ayudarte?</h1>
-      <div className="botonesStart">
-        <button className="botonTramites">
-          <img className="ContenidoStartI" src={tramitesIcon} alt="tramites" />
-          <h1 className="textoStart">Trámites</h1>
+      <h1 className='textoInfo'>¿En qué podemos ayudarte?</h1>
+      <div className='botonesStart'>
+        <button className='botonTramites'>
+          <img className='ContenidoStartI' src={tramitesIcon} alt='tramites' />
+          <h1 className='textoStart'>Trámites</h1>
         </button>
-        <button className="botonHogar">
-          <img className="ContenidoStartI" src={hogarIcon} alt="hogar" />
-          <h1 className="textoStart">Hogar</h1>
+        <button className='botonHogar'>
+          <img className='ContenidoStartI' src={hogarIcon} alt='hogar' />
+          <h1 className='textoStart'>Hogar</h1>
         </button>
-        <button className="botonMovilidad">
+        <button className='botonMovilidad'>
           <img
-            className="ContenidoStartI"
+            className='ContenidoStartI'
             src={movilidadIcon}
-            alt="movilidad"
+            alt='movilidad'
           />
-          <h1 className="textoStart">Movilidad</h1>
+          <h1 className='textoStart'>Movilidad</h1>
         </button>
         <div>
-          <button className="botonInfo">
-            <NavLink to="/start">
-              <img src={info} alt="info" />
+          <button className='botonInfo'>
+            <NavLink to='/start'>
+              <img src={info} alt='info' />
             </NavLink>
           </button>
         </div>
       </div>
-      <div className="info-info">
-        <h1 className="titulo-dudas">¿Tienes dudas?</h1>
-        <button className="btn-tlf">
-          <a href="tel:+34666888111">Llámanos</a>
+      <div className='info-info'>
+        <h1 className='titulo-dudas'>¿Tienes dudas?</h1>
+        <button className='btn-tlf'>
+          <a href='tel:+34666888111'>Llámanos</a>
         </button>
-        <h1 className="titulo-sug">¿Alguna sugerencia?</h1>
-        <button className="btn-sug">
-          <a href="mailto:2konekta@info.com">Escríbenos</a>
+        <h1 className='titulo-sug'>¿Alguna sugerencia?</h1>
+        <button className='btn-sug'>
+          <a href='mailto:2konekta@info.com'>Escríbenos</a>
         </button>
         <br></br>
-        <button className="btn-salir">
-          <NavLink to="/start" style={{ textDecoration: "none" }}>
+        <button className='btn-salir'>
+          <NavLink to='/start' style={{ textDecoration: "none" }}>
             Salir
           </NavLink>
         </button>
