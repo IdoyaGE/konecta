@@ -16,6 +16,7 @@ export const Chat = (props) => {
   const [newMessage, setNewMessage] = useState("");
   const [messages, setMessages] = useState([]);
   const messagesRef = collection(db, "messages");
+  const [showAutoMessage, setShowAutoMessage] = useState(false);
 
   useEffect(() => {
     const queryMessages = query(
@@ -33,7 +34,7 @@ export const Chat = (props) => {
     });
 
     return () => unsubscribe();
-  }, []);
+  }, [room]);
 
   const getUserName = (email) => {
     const atIndex = email.indexOf("@");
@@ -53,7 +54,19 @@ export const Chat = (props) => {
       room,
     });
     setNewMessage("");
+    //Para el mensaje automático
+    setShowAutoMessage(true);
   };
+
+  useEffect(() => {
+    if (showAutoMessage) {
+      const timer = setTimeout(() => {
+        setShowAutoMessage(false);
+      }, 3000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [showAutoMessage]);
 
   return (
     <div className="chat-app">
@@ -78,7 +91,12 @@ export const Chat = (props) => {
           </div>
         ))}
       </div>
-      <form onSubmit={handleSubmit} className="new-message-form">
+      {showAutoMessage && (
+        <div className='auto-message'>
+          En breve nos pondremos en contacto contigo y resolveremos tus dudas
+        </div>
+      )}
+      <form onSubmit={handleSubmit} className='new-message-form'>
         <input
           className="new-message-input"
           placeholder="Escribe un mensaje..."

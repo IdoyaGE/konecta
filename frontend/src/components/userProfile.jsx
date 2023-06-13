@@ -38,18 +38,18 @@ const UserProfile = () => {
     setUserImage("");
 
     axios
-      .post("/enviar", formData)
+      .post("/add", formData)
       .then(function (response) {
         if (response.status === 200) {
           alert("Registrado correctamente");
           document.getElementById("userProfile").reset(); // Limpiar el formulario
         } else {
-          throw new Error("Error al registrarte");
+          throw new Error("Error al meter tus datos");
         }
       })
       .catch(function (error) {
         console.error(error);
-        alert("Error al registrarte. Inténtalo de nuevo.");
+        alert("Error al meter tus datos. Inténtalo de nuevo.");
       });
   };
 
@@ -71,7 +71,6 @@ const UserProfile = () => {
               placeholder="Nombre"
             />
           </div>
-
           <div className="form-group">
             <label htmlFor="lastName">
               <b>Apellido</b>
@@ -84,7 +83,6 @@ const UserProfile = () => {
               placeholder="Apellido"
             />
           </div>
-
           <div className="form-group">
             <label htmlFor="sex">
               <b>Sexo</b>
@@ -97,7 +95,6 @@ const UserProfile = () => {
               <option value="sexoOtro">Otros</option>
             </select>
           </div>
-
           <div className="form-group">
             <label htmlFor="age">
               <b>Edad</b>
@@ -110,7 +107,6 @@ const UserProfile = () => {
               placeholder="Edad"
             />
           </div>
-
           <div className="form-group">
             <label htmlFor="location">
               <b>Localidad</b>
@@ -123,7 +119,6 @@ const UserProfile = () => {
               placeholder="Localidad"
             />
           </div>
-
           <div className="form-group">
             <label htmlFor="phone">
               <b>Teléfono</b>

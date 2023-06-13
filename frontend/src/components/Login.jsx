@@ -31,20 +31,20 @@ const Login = () => {
       <main>
         <section>
           <div>
-            <h1 className="tituloLogin">Iniciar sesión</h1>
+            <h1 className='tituloLogin'>¿Quieres iniciar sesión?</h1>
 
             <form>
-              <div className="containerLogin">
-                <label className="labelLogin" htmlFor="email-address">
-                  Correo Electrónico
+              <div className='containerLogin'>
+                <label className='labelLogin' htmlFor='email-address'>
+                  Dirección de email
                 </label>
                 <input
-                  className="inputLogin"
-                  id="email-address"
-                  name="email"
-                  type="email"
+                  className='inputLogin'
+                  id='email-address'
+                  name='email'
+                  type='email'
                   required
-                  placeholder="Introduce aqui tu correo"
+                  placeholder='Email'
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
@@ -70,7 +70,6 @@ const Login = () => {
                 </button>
               </div>
             </form>
-
             <p className="textoRegister">
               No tienes cuenta?{" "}
               <NavLink className="botonRegisterL" to="/signup">

@@ -1,4 +1,4 @@
-const User = require("../models/users");
+import User from "../models/users.js";
 
 // Obtener todos los perfiles de usuario
 const getAllUsers = async (req, res) => {
@@ -61,8 +61,7 @@ const deleteUser = async (req, res) => {
     res.status(400).json({ error: "Error al eliminar el perfil de usuario" });
   }
 };
-
-module.exports = {
+export default {
   getAllUsers,
   createUser,
   updateUser,
