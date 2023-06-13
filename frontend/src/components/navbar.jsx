@@ -2,7 +2,7 @@ import React from "react";
 import perfilIcon from "../images/Icon/profileperfil.png";
 import { NavLink } from "react-router-dom";
 import notificaionIcon from "../images/Icon/notifications.png";
-import LogoNav from "../images/Group 8 .png";
+import LogoNav from "../images/Group 8.png";
 import "./Navbar.scss";
 
 const navbar = () => {

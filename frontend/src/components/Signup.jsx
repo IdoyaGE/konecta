@@ -34,50 +34,50 @@ const Signup = () => {
       <section>
         <div>
           <div>
-            <h1 className='tituloRegister'> Registro </h1>
-            <form className='containerRegister'>
+            <h1 className="tituloRegister"> Registro </h1>
+            <form className="containerRegister">
               <div>
-                <label className='labelRegister' htmlFor='email-address'>
+                <label className="labelRegister" htmlFor="email-address">
                   Correo electrónico
                 </label>
                 <input
-                  className='inputRegister'
-                  type='email'
-                  label='Email address'
+                  className="inputRegister"
+                  type="email"
+                  label="Email address"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  placeholder='Introduce tu correo electrónico'
+                  placeholder="Introduce aqui tu correo"
                 />
               </div>
 
               <div>
-                <label className='labelRegister' htmlFor='password'>
+                <label className="labelRegister" htmlFor="password">
                   Contraseña
                 </label>
                 <input
-                  className='inputRegister'
-                  type='password'
-                  label='Create password'
+                  className="inputRegister"
+                  type="password"
+                  label="Create password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
-                  placeholder='Introduce tu contraseña'
+                  placeholder="Introce aqui tu contraseña"
                 />
               </div>
 
               <button
-                className='botonRegister'
-                type='submit'
+                className="botonRegister"
+                type="submit"
                 onClick={onSubmit}
               >
-                Regístrate
+                Registrarse
               </button>
             </form>
 
-            <p className='textoLogin'>
-              ¿Ya tienes cuenta?{" "}
-              <NavLink className='botonLoginR' to='/login'>
+            <p className="textoLogin">
+              Ya tienes cuenta?{" "}
+              <NavLink className="botonLoginR" to="/login">
                 Iniciar Sesión
               </NavLink>
             </p>

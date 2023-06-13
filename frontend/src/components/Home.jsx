@@ -23,21 +23,21 @@ const Home = ({ user }) => {
   return (
     <>
       <nav>
-        <div className='containerHome'>
-          <img className='logoInicio' src={logo} alt='logo' />
+        <div className="containerHome">
+          <img className="logoInicio" src={logo} alt="logo" />
           <div>
             <h4>Estamos aquí para ofrecerte la ayuda que necesitas</h4>
             <h4>
-              Regístrate ahora y descubre todo lo que podemos hacer por ti
+              !Registrate ahora y descubre todo lo que podemos hacer port ti!
             </h4>
           </div>
           <div>
-            <button className='botonHomeL' onClick={() => navigate("/signup")}>
-              Regístrate
+            <button className="botonHomeL" onClick={() => navigate("/signup")}>
+              Registrate
             </button>
-            <h4 className='textoLoginHome'>
-              ¿Ya tienes una cuenta?{" "}
-              <NavLink className='botonLoginRHome' to='/login'>
+            <h4 className="textoLoginHome">
+              Ya tienes una cuenta?{" "}
+              <NavLink className="botonLoginRHome" to="/login">
                 Iniciar Sesión
               </NavLink>
             </h4>
