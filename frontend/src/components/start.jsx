@@ -23,7 +23,7 @@ const Start = () => {
   return (
     <div>
       <Navbar />
-      <h3>¿En qué podemos ayudarte?</h3>
+      <h1 className="titulo-start">¿En qué podemos ayudarte?</h1>
       <div className="botonesStart">
         <button className="botonTramites">
           <NavLink className="ContenidoStart" to="/tramites">
@@ -32,7 +32,7 @@ const Start = () => {
               src={tramitesIcon}
               alt="tramites"
             />
-            <h1 className="textoStart">Tramites</h1>
+            <h1 className="textoStart">Trámites</h1>
           </NavLink>
         </button>
         <button className="botonHogar">
@@ -52,7 +52,9 @@ const Start = () => {
           </NavLink>
         </button>
         <button className="botonInfo">
-          <img src={info} alt="info" />
+          <NavLink to="/info">
+            <img src={info} alt="info" />
+          </NavLink>
         </button>
       </div>
     </div>
