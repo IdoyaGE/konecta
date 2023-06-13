@@ -2,7 +2,6 @@ import express from "express";
 import multer from "multer";
 import User from "../models/users.js";
 
-
 const router = express.Router();
 const storage = multer.diskStorage({
   destination: (req, file, callback) => {
