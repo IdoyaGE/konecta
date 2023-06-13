@@ -1,0 +1,85 @@
+main {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Raleway", sans-serif;
+}
+
+.tituloLogin {
+  text-align: center;
+  color: black;
+  font-size: 30px;
+  margin-top: 20%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+.inputLogin {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px;
+  gap: 10px;
+  width: 287px;
+  height: 10px;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.containerLogin {
+  margin-top: 40%;
+}
+
+.textoRegister {
+  margin-top: 20px;
+  font-size: 15px;
+  color: black;
+}
+
+.botonRegisterL {
+  color: #009ec3;
+  font-size: 20px;
+  background-color: #ffffff;
+}
+
+.labelLogin {
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+}
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+  main {
+    padding: 10px;
+  }
+}
+
+/* Estilos adicionales */
+input::placeholder {
+  margin-top: 5px;
+  font-style: italic;
+}
+
+.botonLogin {
+  margin-top: 10px;
+  align-self: center;
+  color: #ffffff;
+  background-color: #009ec3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
+  padding: 10px 20px;
+}

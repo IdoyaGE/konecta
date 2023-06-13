@@ -1,0 +1,100 @@
+.chat-app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Raleway", sans-serif;
+  padding-top: 15px;
+  position: relative;
+}
+
+.header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.message {
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #009ec3;
+  padding: 10px;
+  width: auto;
+  height: auto;
+  text-align: left;
+  border-top-left-radius: 0px;
+}
+
+.user-message {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border-top-right-radius: 0px;
+  background-color: none !important;
+  border: 1px solid green !important;
+  padding: 10px;
+  width: auto;
+  height: auto;
+  text-align: right !important;
+}
+
+.user {
+  font-weight: bold;
+}
+
+.new-message-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  align-items: center;
+}
+
+.new-message-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #009ec3;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-family: "Raleway", sans-serif;
+  background-color: white;
+  width: 400px;
+  height: 30px;
+}
+
+.send-button-chat {
+  color: #ffffff;
+  background-color: #009ec3;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 100px;
+  margin-left: 20%;
+  margin-top: -8px;
+}
+
+.new-message-input::placeholder {
+  color: #009ec3;
+}
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+  .chat-app {
+    padding: 10px;
+  }
+
+  .new-message-form {
+    flex-direction: column;
+    align-items: center;
+    width: 460px;
+  }
+
+  .new-message-input {
+    margin-right: 0px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+}

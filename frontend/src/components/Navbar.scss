@@ -1,0 +1,73 @@
+// Navbar.scss
+
+.navbar {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 0px;
+}
+
+.logo-nav {
+  text-decoration: none;
+  color: black;
+  font-size: 50px;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.botonesNav {
+  margin-top: -70px;
+  margin-bottom: 20px;
+  text-align: right;
+  padding-bottom: 20px;
+}
+
+.navPerfil,
+.navNoti {
+  margin-right: 30px;
+  height: auto;
+  width: auto;
+}
+
+.logoNav {
+  width: 102px;
+  height: 48.47px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* .botonesNav {
+  margin-top: -70px;
+  margin-bottom: 50px;
+  text-align: right;
+} */
+
+.navPerfil,
+.navNoti {
+  margin-right: 30px;
+  height: auto;
+  width: auto;
+}
+
+.text-navbar {
+  text-decoration: none;
+  color: black;
+  text-align: right;
+  font-family: "Raleway", sans-serif;
+  margin-top: -30px;
+}
+
+.text-navbar {
+  text-decoration: none;
+  color: black;
+  text-align: right;
+  font-family: "Raleway", sans-serif;
+  margin-top: -30px;
+}
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+  .navbar {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+  }
+}

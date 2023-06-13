@@ -1,0 +1,28 @@
+version: "3"
+services:
+  backend:
+    build: ./backend
+    restart: always
+    container_name: backend-konekta2
+    ports:
+      - "3022:3000"
+    depends_on:
+      - mongo
+
+  frontend:
+    build: ./frontend
+    restart: always
+    container_name: frontend-konekta2
+    ports:
+      - "80:80"
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo
+    container_name: mongo-konekta2
+    restart: always
+    ports:
+      - "27022:27017"
+    environment:
+      MONGO_INITDB_DATABASE: konekta2
