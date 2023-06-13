@@ -8,6 +8,7 @@ import hogarIcon from "../images/Icon/hogar.png";
 import Info from "./Info";
 import "./start.scss";
 import { useState } from "react";
+import Footer from "./Footer";
 
 const Start = () => {
   const [showModal, setShowModal] = useState(false);
@@ -57,6 +58,7 @@ const Start = () => {
           </NavLink>
         </button>
       </div>
+      <Footer />
     </div>
   );
 };

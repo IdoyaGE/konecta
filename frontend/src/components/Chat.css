@@ -42,23 +42,26 @@
 }
 
 .new-message-form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-top: 40px;
-  margin-bottom: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
 .new-message-input {
-  flex: 1;
-  padding: 10px;
-  border: 1px solid #009ec3;
-  border-radius: 5px;
-  margin-right: 10px;
-  font-family: "Raleway", sans-serif;
-  background-color: white;
-  width: 400px;
-  height: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px;
+  gap: 10px;
+  width: 90%;
+  background: #ffffff;
+  color: black;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
 
 .send-button-chat {
@@ -72,12 +75,19 @@
   padding-top: 15px;
   padding-bottom: 15px;
   width: 100px;
-  margin-left: 20%;
-  margin-top: -8px;
+  margin-top: 10px;
 }
 
 .new-message-input::placeholder {
-  color: #009ec3;
+  color: black;
+}
+
+.linea-separar {
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  border-top: 1px solid #009ec3;
+  width: 90%;
 }
 
 /* Estilos para dispositivos móviles */
@@ -87,14 +97,14 @@
   }
 
   .new-message-form {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    width: 460px;
+    text-align: center;
   }
 
   .new-message-input {
     margin-right: 0px;
     margin-bottom: 10px;
-    width: 100%;
   }
 }

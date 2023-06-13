@@ -51,11 +51,11 @@ function App() {
       {room ? (
         <Chat room={room} />
       ) : (
-        <div className='room'>
-          <h2>
+        <div className="room">
+          <h2 className="frase-app">
             Estás en la categoría de MOVILIDAD ¿En qué te podemos ayudar?{" "}
           </h2>
-          <div className='room-list'>
+          <div className="room-list">
             {rooms.map((room, index) => (
               <div className="room-item" key={index}>
                 <button

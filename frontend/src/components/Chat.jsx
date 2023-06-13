@@ -92,11 +92,12 @@ export const Chat = (props) => {
         ))}
       </div>
       {showAutoMessage && (
-        <div className='auto-message'>
+        <div className="auto-message">
           En breve nos pondremos en contacto contigo y resolveremos tus dudas
         </div>
       )}
-      <form onSubmit={handleSubmit} className='new-message-form'>
+      <form onSubmit={handleSubmit} className="new-message-form">
+        <button className="linea-separar"></button>
         <input
           className="new-message-input"
           placeholder="Escribe un mensaje..."
