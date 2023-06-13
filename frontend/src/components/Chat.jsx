@@ -103,7 +103,7 @@ export const Chat = (props) => {
           onChange={(e) => setNewMessage(e.target.value)}
           value={newMessage}
         />
-        <button type="submit" className="send-button">
+        <button type="submit" className="send-button-chat">
           Enviar
         </button>
       </form>

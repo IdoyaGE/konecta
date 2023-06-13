@@ -56,11 +56,13 @@ const UserProfile = () => {
   return (
     <div>
       <Navbar />
-      <div className="container">
-        <h1>Datos de tu perfil</h1>
+      <div className="containerUserProfile">
+        <h1 className="titulo-userProfile">Datos de tu perfil</h1>
         <form onSubmit={changeOnClick} encType="multipart/form-data">
           <div className="form-group">
-            <label htmlFor="firstName">Nombre</label>
+            <label htmlFor="firstName">
+              <b>Nombre</b>
+            </label>
             <input
               type="text"
               value={firstName}
@@ -70,7 +72,9 @@ const UserProfile = () => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="lastName">Apellido</label>
+            <label htmlFor="lastName">
+              <b>Apellido</b>
+            </label>
             <input
               type="text"
               value={lastName}
@@ -80,17 +84,21 @@ const UserProfile = () => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="sex">Sexo</label>
-            <input
-              type="text"
-              value={sex}
-              onChange={(e) => setSex(e.target.value)}
-              className="form-control"
-              placeholder="Sexo"
-            />
+            <label htmlFor="sex">
+              <b>Sexo</b>
+            </label>
+            <select name="sexo" className="form-control1">
+              <option value="sexoHombre" selected>
+                Hombre
+              </option>
+              <option value="sexoMujer">Mujer</option>
+              <option value="sexoOtro">Otros</option>
+            </select>
           </div>
           <div className="form-group">
-            <label htmlFor="age">Edad</label>
+            <label htmlFor="age">
+              <b>Edad</b>
+            </label>
             <input
               type="text"
               value={age}
@@ -100,7 +108,9 @@ const UserProfile = () => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="location">Localidad</label>
+            <label htmlFor="location">
+              <b>Localidad</b>
+            </label>
             <input
               type="text"
               value={location}
@@ -110,7 +120,9 @@ const UserProfile = () => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="phone">Teléfono</label>
+            <label htmlFor="phone">
+              <b>Teléfono</b>
+            </label>
             <input
               type="text"
               value={phone}
@@ -121,7 +133,9 @@ const UserProfile = () => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="file">Sube tu foto</label>
+            <label htmlFor="file">
+              <b>Sube tu foto</b>
+            </label>
             <input
               type="file"
               name="userImage"
@@ -130,7 +144,7 @@ const UserProfile = () => {
             />
           </div>
 
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn-userProfile">
             Guardar
           </button>
         </form>

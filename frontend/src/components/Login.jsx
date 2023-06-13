@@ -68,9 +68,6 @@ const Login = () => {
                 <button className="botonLogin" onClick={onLogin}>
                   Login
                 </button>
-                <button className="botonLogin" onClick={onLogin}>
-                  Login
-                </button>
               </div>
             </form>
             <p className="textoRegister">
