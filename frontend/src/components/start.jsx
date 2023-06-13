@@ -5,9 +5,21 @@ import info from "../images/Icon/info.png";
 import tramitesIcon from "../images/Icon/tramites.png";
 import movilidadIcon from "../images/Icon/movilidad.png";
 import hogarIcon from "../images/Icon/hogar.png";
+import Info from "./Info";
 import "./start.scss";
+import { useState } from "react";
 
-const start = () => {
+const Start = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleShowModal = () => {
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
   return (
     <div>
       <Navbar />
@@ -47,4 +59,4 @@ const start = () => {
   );
 };
 
-export default start;
+export default Start;

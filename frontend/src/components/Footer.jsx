@@ -23,7 +23,6 @@ const Footer = () => {
           <img src={logoEuro} alt="logo euro" width="75px" height="75px" />
           <p className="copy">&copy; 2023 konecta2</p>
           <p className="email">Email: info@konecta2.com</p>
-
           <ul class="list-unstyled d-flexiconosredes">
             <li class="facebook">
               <img

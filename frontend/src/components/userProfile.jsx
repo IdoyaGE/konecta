@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Navbar from "./navbar";
+import "./userProfile.scss";
 
 const UserProfile = () => {
   const [firstName, setFirstName] = useState("");
@@ -37,18 +38,18 @@ const UserProfile = () => {
     setUserImage("");
 
     axios
-      .post("/enviar", formData)
+      .post("/add", formData)
       .then(function (response) {
         if (response.status === 200) {
           alert("Registrado correctamente");
           document.getElementById("userProfile").reset(); // Limpiar el formulario
         } else {
-          throw new Error("Error al registrarte");
+          throw new Error("Error al meter tus datos");
         }
       })
       .catch(function (error) {
         console.error(error);
-        alert("Error al registrarte. Inténtalo de nuevo.");
+        alert("Error al meter tus datos. Inténtalo de nuevo.");
       });
   };
 
@@ -68,7 +69,6 @@ const UserProfile = () => {
               placeholder="Nombre"
             />
           </div>
-
           <div className="form-group">
             <label htmlFor="lastName">Apellido</label>
             <input
@@ -79,7 +79,6 @@ const UserProfile = () => {
               placeholder="Apellido"
             />
           </div>
-
           <div className="form-group">
             <label htmlFor="sex">Sexo</label>
             <input
@@ -90,7 +89,6 @@ const UserProfile = () => {
               placeholder="Sexo"
             />
           </div>
-
           <div className="form-group">
             <label htmlFor="age">Edad</label>
             <input
@@ -101,7 +99,6 @@ const UserProfile = () => {
               placeholder="Edad"
             />
           </div>
-
           <div className="form-group">
             <label htmlFor="location">Localidad</label>
             <input
@@ -112,7 +109,6 @@ const UserProfile = () => {
               placeholder="Localidad"
             />
           </div>
-
           <div className="form-group">
             <label htmlFor="phone">Teléfono</label>
             <input

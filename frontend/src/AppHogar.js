@@ -33,7 +33,7 @@ function App() {
       image: logo1,
     },
     {
-      name: "Nutrición y alimentacion",
+      name: "Nutrición y alimentación",
       image: logo2,
     },
     {
@@ -56,9 +56,10 @@ function App() {
       {room ? (
         <Chat room={room} />
       ) : (
-        <div className="room">
-          <h2>Estás en la categoría HOGAR ¿En qué te podemos ayudar? </h2>
-          <div className="room-list">
+        <div className='room'>
+          <h2>Estás en la categoría de HOGAR ¿En qué te podemos ayudar? </h2>
+          <div className='room-list'>
+
             {rooms.map((room, index) => (
               <div className="room-item" key={index}>
                 <button
