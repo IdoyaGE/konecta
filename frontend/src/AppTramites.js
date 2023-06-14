@@ -12,6 +12,7 @@ import logo1 from "./images/Icon/Vector.png";
 import logo2 from "./images/Icon/Vectora.png";
 import logo3 from "./images/Icon/Vector2.png";
 import logo4 from "./images/Icon/Vector3.png";
+import logoAtras from "./images/Icon/back.png";
 
 const cookies = new Cookies();
 
@@ -62,10 +63,10 @@ function App() {
         <Chat room={room} />
       ) : (
         <div className="room">
-          <h2 className="frase-app">
-            {" "}
-            Estás en la categoría de Trámites ¿En qué te podemos ayudar?{" "}
-          </h2>
+          <h2 className="frase-app"> Trámites </h2>
+          <a href="/start">
+            <img className="bton-volver" src={logoAtras} alt="tramites" />
+          </a>
           <div className="room-list">
             {rooms.map((room, index) => (
               <div className="room-item" key={index}>

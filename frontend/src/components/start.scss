@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
+  text-decoration: none;
 }
 
 .titulo-start {
@@ -12,6 +13,7 @@
   font-family: "Raleway", sans-serif;
   font-size: 30px;
   margin-top: 10px;
+  text-decoration: none;
 }
 
 .button-container {
@@ -19,6 +21,7 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  text-decoration: none;
 }
 
 /* .button-container button {
@@ -83,6 +86,11 @@
   margin-left: 75%;
   cursor: pointer;
   font-family: "Raleway", sans-serif;
+  text-decoration: none;
+}
+
+.info-Fi {
+  position: fixed;
 }
 
 .textoStart {
