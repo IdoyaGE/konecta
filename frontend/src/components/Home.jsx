@@ -28,7 +28,7 @@ const Home = ({ user }) => {
           <div>
             <h4>¿Quieres vivir de manera autónoma y sin preocupaciones?</h4>
             <h4>
-              !Registrate ahora y descubre todo lo que podemos hacer port ti!
+              !Regístrate ahora y descubre todo lo que podemos hacer port ti!
             </h4>
           </div>
           <div>
@@ -36,9 +36,9 @@ const Home = ({ user }) => {
               Regístrate
             </button>
             <h4 className="textoLoginHome">
-              Si ya tienes cuenta{" "}
+              ¿Si ya tienes cuenta?{" "}
               <NavLink className="botonLoginRHome" to="/login">
-                Inicia Sesión
+                Iniciar Sesión
               </NavLink>
             </h4>
           </div>

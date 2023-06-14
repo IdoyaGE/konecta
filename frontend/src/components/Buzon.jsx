@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import "./Formulario.scss";
+import Navbar from "./navbar";
+import Footer from "./Footer";
 
 const Buzon = () => {
   const [formularioEnviado, cambiarFormularioEnviado] = useState(false);
 
   return (
     <>
+      <Navbar />
       <Formik
         initialValues={{
           categoria: "",
@@ -32,43 +35,54 @@ const Buzon = () => {
         }}
       >
         {({ errors }) => (
-          <Form className='formulario'>
-            <div>
-              <label>
-                <Field type='radio' name='categoria' value='tramites' />{" "}
-                Trámites
+          <Form className="formulario">
+            <div className="buzon-cat">
+              <label className="text-form" htmlFor="categoria">
+                Categoria
               </label>
-              <label>
-                <Field type='radio' name='categoria' value='hogar' /> Hogar
-              </label>
-              <label>
-                <Field type='radio' name='categoria' value='movilidad' />{" "}
-                Movilidad
-              </label>
+              <div className="form-control">
+                <label>
+                  <Field type="radio" name="categoria" value="tramites" />{" "}
+                  Trámites
+                </label>
+                <label>
+                  <Field type="radio" name="categoria" value="hogar" /> Hogar
+                </label>
+                <label>
+                  <Field type="radio" name="categoria" value="movilidad" />{" "}
+                  Movilidad
+                </label>
+              </div>
             </div>
             <div>
-              <label htmlFor='sugerencia'>Escribe tu queja o sugerencia:</label>
+              <label className="text-form" htmlFor="sugerencia">
+                Escribe tu queja o sugerencia:
+              </label>
               <Field
-                type='text'
-                id='sugerencia'
-                name='sugerencia'
-                placeholder='Queja o sugerencia'
+                className="form-control"
+                type="text"
+                id="sugerencia"
+                name="sugerencia"
+                placeholder="Queja o sugerencia"
               />
               <ErrorMessage
-                name='sugerencia'
+                name="sugerencia"
                 component={() => (
-                  <div className='error'>{errors.sugerencia}</div>
+                  <div className="error">{errors.sugerencia}</div>
                 )}
               />
             </div>
 
-            <button type='submit'>Enviar</button>
+            <button className="btn-userProfile" type="submit">
+              Enviar
+            </button>
             {formularioEnviado && (
-              <p className='exito'>Formulario enviado con exito!</p>
+              <p className="exito">Formulario enviado con exito!</p>
             )}
           </Form>
         )}
       </Formik>
+      <Footer />
     </>
   );
 };

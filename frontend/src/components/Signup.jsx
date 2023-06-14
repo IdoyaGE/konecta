@@ -47,7 +47,7 @@ const Signup = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  placeholder="Introduce aqui tu correo"
+                  placeholder="Introduce aquí tu correo"
                 />
               </div>
 
@@ -62,7 +62,7 @@ const Signup = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
-                  placeholder="Introce aqui tu contraseña"
+                  placeholder="Introduce aquí tu contraseña"
                 />
               </div>
 
@@ -71,12 +71,12 @@ const Signup = () => {
                 type="submit"
                 onClick={onSubmit}
               >
-                Registrarse
+                Regístrarse
               </button>
             </form>
 
             <p className="textoLogin">
-              Ya tienes cuenta?{" "}
+              ¿Ya tienes cuenta?{" "}
               <NavLink className="botonLoginR" to="/login">
                 Iniciar Sesión
               </NavLink>
