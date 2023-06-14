@@ -7,7 +7,7 @@ Web app para solucionar el problema de la soledad en las personas mayores y ofre
 Estas instrucciones te van a permitir obtener una copia para que puedas relizar pruebas.
 Ten en cuenta que este proyecto es un MVP y que determinadas funcionalidades no están totalmente desarrolladas.
 Instalación:
- $ git clone 
+ $ git clone git@github.com:IdoyaGE/konecta.git
  $ npm install 
  $ npm start
 
