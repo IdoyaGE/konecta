@@ -50,7 +50,7 @@ const Info = () => {
         </button>
         <h1 className="titulo-sug">¿Alguna sugerencia?</h1>
         <button className="btn-sug">
-          <a style={{ textDecoration: "none" }} href="mailto:2konekta@info.com">
+          <a style={{ textDecoration: "none" }} href="/buzon">
             Escríbenos
           </a>
         </button>

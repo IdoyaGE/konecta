@@ -26,19 +26,19 @@ const Home = ({ user }) => {
         <div className="containerHome">
           <img className="logoInicio" src={logo} alt="logo" />
           <div>
-            <h4>Estamos aquí para ofrecerte la ayuda que necesitas</h4>
+            <h4>¿Quieres vivir de manera autónoma y sin preocupaciones?</h4>
             <h4>
               !Registrate ahora y descubre todo lo que podemos hacer port ti!
             </h4>
           </div>
           <div>
             <button className="botonHomeL" onClick={() => navigate("/signup")}>
-              Registrate
+              Regístrate
             </button>
             <h4 className="textoLoginHome">
-              Ya tienes una cuenta?{" "}
+              Si ya tienes cuenta{" "}
               <NavLink className="botonLoginRHome" to="/login">
-                Iniciar Sesión
+                Inicia Sesión
               </NavLink>
             </h4>
           </div>

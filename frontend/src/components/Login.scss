@@ -52,6 +52,7 @@ label {
   color: #009ec3;
   font-size: 20px;
   background-color: #ffffff;
+  text-decoration: none;
 }
 
 .labelLogin {
@@ -81,5 +82,9 @@ input::placeholder {
   border-radius: 5px;
   cursor: pointer;
   font-family: "Raleway", sans-serif;
+  font-size: 20px;
   padding: 10px 20px;
+}
+.botonLoginR {
+  text-decoration: none;
 }
