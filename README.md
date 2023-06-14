@@ -58,7 +58,7 @@ Vamos con las librerías que tienes que instalar:
     universal-cookie: versión 4.0.4,
     bootstrap: versión 
     
-    Styles: Hemos utilizado sass para utilizar estilos de css anidados y plantillas de Bootstrap. 
+    Styles: Hemos utilizado sass para estilos de css anidados y plantillas de Bootstrap. 
     
   ##### contenedor Docker
   
