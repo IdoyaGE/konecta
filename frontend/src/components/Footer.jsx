@@ -6,6 +6,7 @@ import img10 from "../images/tw.png";
 import "./Footer.css";
 import logoBizkaia from "../images/Icon/Ellipse 15.png";
 import logoEuro from "../images/Icon/Ellipse 19.png";
+import logothebridge from "../images/Icon/bbkbootcamp.png";
 
 //Variable footer que devuelve el menú, suscripción a la newsletter y links a las redes sociales
 
@@ -13,42 +14,48 @@ const Footer = () => {
   return (
     <div>
       <footer>
-        <div className="redessociales">
+        <div className='redessociales'>
           <img
             src={logoBizkaia}
-            alt="logo bizkaia"
-            width="75px"
-            height="75px"
+            alt='logo bizkaia'
+            width='180px'
+            height='auto'
           />
-          <img src={logoEuro} alt="logo euro" width="75px" height="75px" />
-          <p className="copy">&copy; 2023 2konecta</p>
-          <p className="email">Email: info@2konecta.com</p>
-          <ul class="list-unstyled d-flexiconosredes">
-            <li class="facebook">
+          <img
+            src={logothebridge}
+            alt='logo thebridge'
+            width='400px'
+            height='auto'
+          />
+          <img src={logoEuro} alt='logo euro' width='110px' height='auto' />
+          <p className='copy'>&copy; 2023 2konecta</p>
+          <p className='email'>Email: info@2konecta.com</p>
+          <ul class='list-unstyled d-flexiconosredes'>
+            <li class='facebook'>
               <img
                 src={img7}
-                id="iconos"
-                alt="Logo facebook"
-                width="75px"
-                height="75px"
+                id='iconos'
+                alt='Logo facebook'
+                width='75px'
+                height='75px'
               />
             </li>
-            <li class="instagram">
+            <li class='instagram'>
               <img
                 src={img8}
-                id="iconos"
-                alt="Logo instagram"
-                width="75px"
-                height="75px"
+                id='iconos'
+                alt='Logo instagram'
+                width='75px'
+                height='75px'
               />
             </li>
-            <li class="twitter">
+            <li class='twitter'>
               <img
                 src={img10}
-                id="iconos"
-                alt="Logo twitter"
-                width="75px"
-                height="75px"
+                id='iconos'
+                alt='Logo twitter'
+                width='75px'
+                height='75px'
               />
             </li>
           </ul>
