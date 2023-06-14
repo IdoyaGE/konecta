@@ -33,11 +33,11 @@ const Start = () => {
             style={{ textDecoration: "none" }}
           >
             <img
-              className="ContenidoStartI"
+              className='ContenidoStartI'
               src={tramitesIcon}
-              alt="tramites"
+              alt='tramites'
             />
-            <h1 className="textoStart">Trámites</h1>
+            <h1 className='textoStart'>Trámites</h1>
           </NavLink>
         </button>
         <button className="botonHogar">
@@ -49,11 +49,11 @@ const Start = () => {
         <button className="botonMovilidad">
           <NavLink to="/movilidad" style={{ textDecoration: "none" }}>
             <img
-              className="ContenidoStartI"
+              className='ContenidoStartI'
               src={movilidadIcon}
-              alt="movilidad"
+              alt='movilidad'
             />
-            <h1 className="textoStart">Movilidad</h1>
+            <h1 className='textoStart'>Movilidad</h1>
           </NavLink>
         </button>
         <button className="botonInfo">
