@@ -1,19 +1,18 @@
 .redessociales {
-  background-color: #f3f3f3;
+  background-color: #dedddd71;
   margin: auto;
+  margin-top: 50px;
+  padding-top: 50px;
 }
 .redessociales {
   text-align: center;
-  background-color: #fff;
 }
 .copy {
   text-align: center;
-  background-color: #fff;
   padding-top: 20px;
 }
 .email {
   text-align: center;
-  background-color: #fff;
 }
 .footer {
   font-family: "Montserrat", sans-serif;
@@ -49,10 +48,6 @@
 
 .footernav-item {
   margin-right: 10px;
-}
-
-.redessociales {
-  margin-top: 20px;
 }
 
 .redessociales p {

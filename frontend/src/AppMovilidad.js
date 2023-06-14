@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/navbar";
 import logo1 from "./images/Icon/Vector6.png";
 import logo2 from "./images/Icon/Vector7.png";
+import logoAtras from "./images/Icon/back.png";
 
 const cookies = new Cookies();
 
@@ -51,11 +52,12 @@ function App() {
       {room ? (
         <Chat room={room} />
       ) : (
-        <div className='room'>
-          <h2>
-            Estás en la categoría de MOVILIDAD ¿En qué te podemos ayudar?{" "}
-          </h2>
-          <div className='room-list'>
+        <div className="room">
+          <h2 className="frase-app">Movilidad </h2>
+          <a href="/start">
+            <img className="bton-volver" src={logoAtras} alt="tramites" />
+          </a>
+          <div className="room-list">
             {rooms.map((room, index) => (
               <div className="room-item" key={index}>
                 <button

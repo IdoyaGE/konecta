@@ -1,0 +1,70 @@
+.texto-noti {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+}
+
+.notificacionT {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 23px;
+
+  width: 302px;
+  height: auto;
+
+  background: #fdfdfd;
+  color: black;
+  border: 1px solid #008dae;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.icon-not-1 {
+  background-color: #008dae;
+  padding: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  height: auto;
+  width: 50px;
+}
+
+.notificacionH {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 23px;
+
+  width: 302px;
+  height: auto;
+
+  background: #fdfdfd;
+  color: black;
+  border: 1px solid #ffcd3d;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  margin: auto;
+  margin-bottom: 100px;
+}
+
+.icon-not-2 {
+  background-color: #ffcd3d;
+  padding: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  height: auto;
+  width: 50px;
+}
+
+.not-num1 {
+  margin-top: -70px;
+  margin-left: 40px;
+}
+.not-num2 {
+  margin-top: -70px;
+  margin-left: 70px;
+}

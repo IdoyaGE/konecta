@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import Navbar from "./navbar";
 import info from "../images/Icon/info.png";
@@ -8,6 +8,7 @@ import hogarIcon from "../images/Icon/hogar.png";
 import Info from "./Info";
 import "./start.scss";
 import { useState } from "react";
+import Footer from "./Footer";
 
 const Start = () => {
   const [showModal, setShowModal] = useState(false);
@@ -23,12 +24,12 @@ const Start = () => {
   return (
     <div>
       <Navbar />
-      <h1 className='titulo-start'>¿En qué podemos ayudarte?</h1>
-      <div className='botonesStart'>
-        <button className='botonTramites'>
+      <h1 className="titulo-start">¿En qué podemos ayudarte?</h1>
+      <div className="botonesStart">
+        <button className="botonTramites">
           <NavLink
-            className='ContenidoStart'
-            to='/tramites'
+            className="ContenidoStart"
+            to="/tramites"
             style={{ textDecoration: "none" }}
           >
             <img
@@ -39,14 +40,14 @@ const Start = () => {
             <h1 className='textoStart'>Trámites</h1>
           </NavLink>
         </button>
-        <button className='botonHogar'>
-          <NavLink to='/hogar'>
-            <img className='ContenidoStartI' src={hogarIcon} alt='hogar' />
-            <h1 className='textoStart'>Hogar</h1>
+        <button className="botonHogar">
+          <NavLink to="/hogar" style={{ textDecoration: "none" }}>
+            <img className="ContenidoStartI" src={hogarIcon} alt="hogar" />
+            <h1 className="textoStart">Hogar</h1>
           </NavLink>
         </button>
-        <button className='botonMovilidad'>
-          <NavLink to='/movilidad'>
+        <button className="botonMovilidad">
+          <NavLink to="/movilidad" style={{ textDecoration: "none" }}>
             <img
               className='ContenidoStartI'
               src={movilidadIcon}
@@ -55,12 +56,13 @@ const Start = () => {
             <h1 className='textoStart'>Movilidad</h1>
           </NavLink>
         </button>
-        <button className='botonInfo'>
-          <NavLink to='/info'>
-            <img src={info} alt='info' />
+        <button className="botonInfo">
+          <NavLink className="info-Fi" to="/info">
+            <img src={info} alt="info" />
           </NavLink>
         </button>
       </div>
+      <Footer />
     </div>
   );
 };

@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import "./Formulario.scss";
+import Navbar from "./navbar";
+import Footer from "./Footer";
 
 const Formulario = () => {
   const [formularioEnviado, cambiarFormularioEnviado] = useState(false);
 
   return (
     <>
+      <Navbar />
+      <h1 className="titulo-userProfile">Perfil</h1>
       <Formik
         initialValues={{
           nombre: "",
@@ -62,96 +66,118 @@ const Formulario = () => {
         }}
       >
         {({ errors }) => (
-          <Form className='formulario'>
-            <div>
-              <label htmlFor='nombre'>Nombre</label>
+          <Form className="formulario">
+            <div className="form-group">
+              <label className="text-form" htmlFor="nombre">
+                Nombre
+              </label>
               <Field
-                type='text'
-                id='nombre'
-                name='nombre'
-                placeholder='Nombre'
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Nombre"
+                className="form-control"
               />
               <ErrorMessage
-                name='nombre'
-                component={() => <div className='error'>{errors.nombre}</div>}
+                name="nombre"
+                component={() => <div className="error">{errors.nombre}</div>}
               />
             </div>
-            <div>
-              <label htmlFor='Apellido'>Apellido</label>
+            <div className="form-group">
+              <label className="text-form" htmlFor="Apellido">
+                Apellido
+              </label>
               <Field
-                type='text'
-                id='apellido'
-                name='apellido'
-                placeholder='apellido'
+                type="text"
+                id="apellido"
+                name="apellido"
+                placeholder="apellido"
+                className="form-control"
               />
               <ErrorMessage
-                name='apellido'
-                component={() => <div className='error'>{errors.apellido}</div>}
+                name="apellido"
+                component={() => <div className="error">{errors.apellido}</div>}
               />
             </div>
-            <div>
-              <label htmlFor='localidad'>Localidad</label>
+            <div className="form-group">
+              <label className="text-form" htmlFor="localidad">
+                Localidad
+              </label>
               <Field
-                type='text'
-                id='localidad'
-                name='localidad'
-                placeholder='Localidad'
+                type="text"
+                id="localidad"
+                name="localidad"
+                placeholder="Localidad"
+                className="form-control"
               />
               <ErrorMessage
-                name='localidad'
+                name="localidad"
                 component={() => (
-                  <div className='error'>{errors.localidad}</div>
+                  <div className="error">{errors.localidad}</div>
                 )}
               />
             </div>
-            <div>
-              <label htmlFor='nacimiento'>Año de nacimiento</label>
+            <div className="form-group">
+              <label className="text-form" htmlFor="nacimiento">
+                Año de nacimiento
+              </label>
               <Field
-                type='text'
-                id='nacimiento'
-                name='nacimiento'
-                placeholder='Año de nacimiento'
+                type="text"
+                id="nacimiento"
+                name="nacimiento"
+                placeholder="Año de nacimiento"
+                className="form-control"
               />
               <ErrorMessage
-                name='nacimiento'
+                name="nacimiento"
                 component={() => (
-                  <div className='error'>{errors.nacimiento}</div>
+                  <div className="error">{errors.nacimiento}</div>
                 )}
               />
             </div>
-            <div>
-              <label htmlFor='telefono'>Móvil</label>
+            <div className="form-group">
+              <label className="text-form" htmlFor="telefono">
+                Móvil
+              </label>
               <Field
-                type='text'
-                id='telefono'
-                name='telefono'
-                placeholder='Móvil'
+                type="text"
+                id="telefono"
+                name="telefono"
+                placeholder="Móvil"
+                className="form-control"
               />
               <ErrorMessage
-                name='telefono'
-                component={() => <div className='error'>{errors.telefono}</div>}
+                name="telefono"
+                component={() => <div className="error">{errors.telefono}</div>}
               />
             </div>
-
-            <div>
-              <label>
-                <Field type='radio' name='sexo' value='hombre' /> Hombre
+            <div className="form-group">
+              <label className="text-form" htmlFor="sexo">
+                Sexo
               </label>
-              <label>
-                <Field type='radio' name='sexo' value='mujer' /> Mujer
-              </label>
-              <label>
-                <Field type='radio' name='sexo' value='otros' /> Otros
-              </label>
+              <div className="form-control">
+                <label>
+                  <Field type="radio" name="sexo" value="hombre" /> Hombre
+                </label>
+                <label>
+                  <Field type="radio" name="sexo" value="mujer" /> Mujer
+                </label>
+                <label>
+                  <Field type="radio" name="sexo" value="otros" /> Otros
+                </label>
+              </div>
             </div>
 
-            <button type='submit'>Enviar</button>
+            <button className="btn-userProfile" type="submit">
+              Enviar
+            </button>
             {formularioEnviado && (
-              <p className='exito'>Formulario enviado con exito!</p>
+              <p className="exito">Formulario enviado con exito!</p>
             )}
           </Form>
         )}
       </Formik>
+      <Footer />
     </>
   );
 };
