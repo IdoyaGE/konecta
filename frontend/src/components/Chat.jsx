@@ -11,6 +11,7 @@ import {
 import { auth, db } from "../firebase";
 import "../components/Chat.css";
 import logoAtras from "../images/Icon/back.png";
+import { NavLink } from "react-router-dom";
 
 export const Chat = (props) => {
   const { room } = props;
@@ -71,12 +72,12 @@ export const Chat = (props) => {
 
   return (
     <div className="chat-app">
-      <a href={"/start"}>
-        <img className="bton-volver" src={logoAtras} alt="tramites" />
-      </a>
       <div className="header">
-        <h3>En este chat te ayudamos con: {room.toUpperCase()}</h3>
+        <h3>{room.toUpperCase()}</h3>
       </div>
+      <NavLink to={"/start"}>
+        <img className="bton-volver-chat" src={logoAtras} alt="tramites" />
+      </NavLink>
       <div className="messages">
         {messages.map((message) => (
           <div
