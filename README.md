@@ -1,6 +1,9 @@
 # konecta
 Proyecto de silvereconomy presentado como proyecto final en el desafío de tripulaciones de BBK Bootcamp by The Bridge.
-Web app para solucionar el problema de la soledad en las personas mayores y ofrecerles una plataforma para detectar problemas de su vida diaria a través de un chat y poder darles una solución offline adaptada a sus necesidades. 
+
+Web app para solucionar el problema de la soledad en las personas mayores.
+
+Queremos ofrecerles una plataforma para detectar problemas de su vida diaria a través de un chat y poder darles una solución offline adaptada a sus necesidades. 
 
 # despegando
 
@@ -30,7 +33,9 @@ Los datos del login y del chat están configurados para almacenarse en firebase 
 Vamos con las librerías que tienes que instalar:
 
 # librerías instaladas
+
 ### backend
+
     axios: versión 1.4.0,
     bcrypt: versión 5.1.0,
     body-parser: versión 1.20.2,
@@ -70,6 +75,7 @@ Vamos con las librerías que tienes que instalar:
   # contenedor Docker
   
   Hemos creado un contenedor Docker para el backend, para el frontend y para mongoDB.
+  
   Para arrancar el contenedor utiliza "docker compose up" e inicializa el backend y el frontend con "npm start".
   
   # colaboración
@@ -83,7 +89,9 @@ Vamos con las librerías que tienes que instalar:
   # agradecimientos
   
   Queremos agradecer a nuestro instructor de fullstack Danel:
+  
   https://github.com/LdMe
+  
   Sin él, este proyecto no existiría. 
   
   
