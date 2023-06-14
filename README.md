@@ -25,7 +25,7 @@ Los datos del login y del chat están configurados para almacenarse en firebase 
 Vamos con las librerías que tienes que instalar:
 
 # librerías instaladas
-# backend
+### backend
     axios: versión 1.4.0,
     bcrypt: versión 5.1.0,
     body-parser: versión 1.20.2,
@@ -47,7 +47,7 @@ Vamos con las librerías que tienes que instalar:
     path-to-regexp: versión 6.2.1,
     universal-cookie: versión 4.0.4,
     
-  # frontend
+  ### frontend
   
     axios: versión 1.4.0,
     firebase: versión 9.22.1,
