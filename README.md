@@ -2,7 +2,7 @@
 Proyecto de silvereconomy presentado como proyecto final en el desafío de tripulaciones de BBK Bootcamp by The Bridge.
 Web app para solucionar el problema de la soledad en las personas mayores y ofrecerles una plataforma para detectar problemas de su vida diaria a través de un chat y poder darles una solución offline adaptada a sus necesidades. 
 
-## despegando
+# despegando
 
 Estas instrucciones te van a permitir obtener una copia para que puedas relizar pruebas.
 Ten en cuenta que este proyecto es un MVP y que determinadas funcionalidades no están totalmente desarrolladas.
@@ -11,7 +11,7 @@ Instalación:
  $ npm install 
  $ npm start
 
-### tecnología
+# tecnología
 
 En este proyecto hemos utilizado MERN (stack de código abierto):
 
@@ -24,8 +24,8 @@ Los datos del login y del chat están configurados para almacenarse en firebase 
 
 Vamos con las librerías que tienes que instalar:
 
-#### librerías instaladas
-#### backend
+# librerías instaladas
+# backend
     axios: versión 1.4.0,
     bcrypt: versión 5.1.0,
     body-parser: versión 1.20.2,
@@ -47,7 +47,7 @@ Vamos con las librerías que tienes que instalar:
     path-to-regexp: versión 6.2.1,
     universal-cookie: versión 4.0.4,
     
-  #### frontend
+  # frontend
   
     axios: versión 1.4.0,
     firebase: versión 9.22.1,
@@ -57,15 +57,17 @@ Vamos con las librerías que tienes que instalar:
     sass: versión 1.62.1,
     universal-cookie: versión 4.0.4,
     bootstrap: versión 
+   
+  # styles
     
-    Styles: Hemos utilizado sass para estilos de css anidados y plantillas de Bootstrap. 
+  Hemos utilizado sass para estilos de css anidados y plantillas de Bootstrap. 
     
-  ##### contenedor Docker
+  # contenedor Docker
   
   Hemos creado un contenedor Docker para el backend, para el frontend y para mongoDB.
   Para arrancar el contenedor utiliza "docker compose up" e inicializa el backend y el frontend con "npm start".
   
-  ###### colaboración
+  # colaboración
   
   Este proyecto ha sido desarrollado por estudiantes del BBK Bootcamp by TheBridge:
   
@@ -73,7 +75,7 @@ Vamos con las librerías que tienes que instalar:
   https://github.com/IdoyaGE
   
   
-  ###### agradecimientos
+  # agradecimientos
   
   Queremos agradecer a nuestro instructor de fullstack Danel:
   https://github.com/LdMe
