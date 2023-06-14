@@ -44,7 +44,7 @@ const Info = () => {
         </button>
         <h1 className='titulo-sug'>¿Alguna sugerencia?</h1>
         <button className='btn-sug'>
-          <a href='mailto:2konekta@info.com'>Escríbenos</a>
+          <a href='/buzon'>Escríbenos</a>
         </button>
         <br></br>
         <button className='btn-salir'>

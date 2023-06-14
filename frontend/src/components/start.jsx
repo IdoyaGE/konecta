@@ -23,37 +23,41 @@ const Start = () => {
   return (
     <div>
       <Navbar />
-      <h1 className="titulo-start">¿En qué podemos ayudarte?</h1>
-      <div className="botonesStart">
-        <button className="botonTramites">
-          <NavLink className="ContenidoStart" to="/tramites">
+      <h1 className='titulo-start'>¿En qué podemos ayudarte?</h1>
+      <div className='botonesStart'>
+        <button className='botonTramites'>
+          <NavLink
+            className='ContenidoStart'
+            to='/tramites'
+            style={{ textDecoration: "none" }}
+          >
             <img
-              className="ContenidoStartI"
+              className='ContenidoStartI'
               src={tramitesIcon}
-              alt="tramites"
+              alt='tramites'
             />
-            <h1 className="textoStart">Trámites</h1>
+            <h1 className='textoStart'>Trámites</h1>
           </NavLink>
         </button>
-        <button className="botonHogar">
-          <NavLink to="/hogar">
-            <img className="ContenidoStartI" src={hogarIcon} alt="hogar" />
-            <h1 className="textoStart">Hogar</h1>
+        <button className='botonHogar'>
+          <NavLink to='/hogar'>
+            <img className='ContenidoStartI' src={hogarIcon} alt='hogar' />
+            <h1 className='textoStart'>Hogar</h1>
           </NavLink>
         </button>
-        <button className="botonMovilidad">
-          <NavLink to="/movilidad">
+        <button className='botonMovilidad'>
+          <NavLink to='/movilidad'>
             <img
-              className="ContenidoStartI"
+              className='ContenidoStartI'
               src={movilidadIcon}
-              alt="movilidad"
+              alt='movilidad'
             />
-            <h1 className="textoStart">Movilidad</h1>
+            <h1 className='textoStart'>Movilidad</h1>
           </NavLink>
         </button>
-        <button className="botonInfo">
-          <NavLink to="/info">
-            <img src={info} alt="info" />
+        <button className='botonInfo'>
+          <NavLink to='/info'>
+            <img src={info} alt='info' />
           </NavLink>
         </button>
       </div>
