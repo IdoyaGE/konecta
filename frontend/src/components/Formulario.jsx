@@ -3,6 +3,8 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import "./Formulario.scss";
 import Navbar from "./navbar";
 import Footer from "./Footer";
+import { NavLink } from "react-router-dom";
+import logoAtras from "../images/Icon/back.png";
 
 const Formulario = () => {
   const [formularioEnviado, cambiarFormularioEnviado] = useState(false);
@@ -11,6 +13,9 @@ const Formulario = () => {
     <>
       <Navbar />
       <h1 className="titulo-userProfile">Perfil</h1>
+      <NavLink to={"/start"}>
+        <img className="bton-volver-fo" src={logoAtras} alt="tramites" />
+      </NavLink>
       <Formik
         initialValues={{
           nombre: "",

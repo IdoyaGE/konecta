@@ -11,6 +11,7 @@ import Navbar from "./components/navbar";
 import logo1 from "./images/Icon/Vector6.png";
 import logo2 from "./images/Icon/Vector7.png";
 import logoAtras from "./images/Icon/back.png";
+import { NavLink } from "react-router-dom";
 
 const cookies = new Cookies();
 
@@ -54,9 +55,9 @@ function App() {
       ) : (
         <div className="room">
           <h2 className="frase-app">Movilidad </h2>
-          <a href="/start">
+          <NavLink to={"/start"}>
             <img className="bton-volver" src={logoAtras} alt="tramites" />
-          </a>
+          </NavLink>
           <div className="room-list">
             {rooms.map((room, index) => (
               <div className="room-item" key={index}>

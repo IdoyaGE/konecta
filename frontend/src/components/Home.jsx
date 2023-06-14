@@ -23,24 +23,22 @@ const Home = ({ user }) => {
   return (
     <>
       <nav>
-        <div className='containerHome'>
-          <img className='logoInicio' src={logo} alt='logo' />
+        <div className="containerHome">
+          <img className="logoInicio" src={logo} alt="logo" />
           <div>
             <h4>¿Quieres vivir de manera autónoma y sin preocupaciones?</h4>
             <h4>
-              En Bikonekta te ofrecemos la ayuda que necesitas, para resolver
-              dudas y problemas de tu vida diaria
+              !Regístrate ahora y descubre todo lo que podemos hacer port ti!
             </h4>
-            <h4>Descubre todo lo que podemos hacer por ti</h4>
           </div>
           <div>
-            <button className='botonHomeL' onClick={() => navigate("/signup")}>
+            <button className="botonHomeL" onClick={() => navigate("/signup")}>
               Regístrate
             </button>
-            <h4 className='textoLoginHome'>
-              Si ya tienes cuenta{" "}
-              <NavLink className='botonLoginRHome' to='/login'>
-                Inicia Sesión
+            <h4 className="textoLoginHome">
+              ¿Si ya tienes cuenta?{" "}
+              <NavLink className="botonLoginRHome" to="/login">
+                Iniciar Sesión
               </NavLink>
             </h4>
           </div>
