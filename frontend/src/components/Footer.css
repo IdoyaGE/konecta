@@ -13,12 +13,10 @@
 }
 .email {
   text-align: center;
+  font-family: "Raleway", sans-serif;
 }
 .footer {
-  font-family: "Montserrat", sans-serif;
-  font-family: "Poppins", sans-serif;
-  font-family: "Quicksand", sans-serif;
-  font-family: "Wix Madefor Display", sans-serif;
+  font-family: "Raleway", sans-serif;
   background-color: #f3f3f3 !important;
   padding: 20px;
   font-size: 14px;
@@ -68,6 +66,17 @@
 
 .d-flexiconosredes li {
   margin-right: 10px;
+}
+
+.logoEuro {
+  margin-top: -30px;
+  margin-bottom: 40px;
+  margin-right: 40px;
+}
+
+.logoBiz {
+  margin-bottom: 7px;
+  margin-right: 40px;
 }
 
 #iconos {

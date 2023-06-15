@@ -1,6 +1,7 @@
 .header {
   margin-bottom: 20px;
 }
+
 .iconChatMo {
   display: flex;
   flex-direction: row;
@@ -55,6 +56,9 @@
 .botonChatTa p {
   font-size: 20px;
 }
+.botonChatHo p {
+  font-size: 19px;
+}
 
 .botonChatTa img {
   background-color: #008dae;
@@ -71,7 +75,7 @@
   align-items: center;
   padding: 0px;
   gap: 23px;
-
+  font-size: 20px;
   width: 302px;
   height: auto;
 
@@ -103,11 +107,13 @@
   font-family: "Raleway", sans-serif;
   font-size: 40px;
   margin-top: 40px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 
 .bton-volver {
-  margin-left: 10px;
+  margin-top: -40px;
+  margin-left: 20px;
+  margin-bottom: 70px;
 }
 
 p {

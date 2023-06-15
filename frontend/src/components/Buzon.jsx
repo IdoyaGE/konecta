@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import "./Formulario.scss";
+import Navbar from "./navbar";
+import Footer from "./Footer";
 
 const Buzon = () => {
   const [formularioEnviado, cambiarFormularioEnviado] = useState(false);
 
   return (
     <>
+      <Navbar />
       <Formik
         initialValues={{
           categoria: "",
@@ -19,7 +22,7 @@ const Buzon = () => {
             errores.sugerencia = "Por favor introduce tu queja o sugerencia";
           } else if (!/^[a-zA-ZÀ-ÿ\s]{1,300}$/.test(valores.localidad)) {
             errores.localidad =
-              "El apellido solo puede contener máximo 300 letras y espacios";
+              "El texto solo puede contener máximo 300 letras y espacios";
           }
 
           return errores;
@@ -33,22 +36,30 @@ const Buzon = () => {
       >
         {({ errors }) => (
           <Form className='formulario'>
-            <div>
-              <label>
-                <Field type='radio' name='categoria' value='tramites' />{" "}
-                Trámites
+            <div className='buzon-cat'>
+              <label className='text-form' htmlFor='categoria'>
+                Categoría
               </label>
-              <label>
-                <Field type='radio' name='categoria' value='hogar' /> Hogar
-              </label>
-              <label>
-                <Field type='radio' name='categoria' value='movilidad' />{" "}
-                Movilidad
-              </label>
+              <div className='form-control'>
+                <label>
+                  <Field type='radio' name='categoria' value='tramites' />{" "}
+                  Trámites
+                </label>
+                <label>
+                  <Field type='radio' name='categoria' value='hogar' /> Hogar
+                </label>
+                <label>
+                  <Field type='radio' name='categoria' value='movilidad' />{" "}
+                  Movilidad
+                </label>
+              </div>
             </div>
             <div>
-              <label htmlFor='sugerencia'>Escribe tu queja o sugerencia:</label>
+              <label className='text-form' htmlFor='sugerencia'>
+                Escribe tu queja o sugerencia:
+              </label>
               <Field
+                className='form-control'
                 type='text'
                 id='sugerencia'
                 name='sugerencia'
@@ -62,13 +73,16 @@ const Buzon = () => {
               />
             </div>
 
-            <button type='submit'>Enviar</button>
+            <button className='btn-userProfile' type='submit'>
+              Enviar
+            </button>
             {formularioEnviado && (
-              <p className='exito'>Formulario enviado con exito!</p>
+              <p className='exito'>Formulario enviado con éxito!</p>
             )}
           </Form>
         )}
       </Formik>
+      <Footer />
     </>
   );
 };

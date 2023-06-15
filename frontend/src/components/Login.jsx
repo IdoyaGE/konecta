@@ -50,29 +50,29 @@ const Login = () => {
               </div>
 
               <div>
-                <label className="labelLogin" htmlFor="password">
+                <label className='labelLogin' htmlFor='password'>
                   Password
                 </label>
                 <input
-                  className="inputLogin"
-                  id="password"
-                  name="password"
-                  type="password"
+                  className='inputLogin'
+                  id='password'
+                  name='password'
+                  type='password'
                   required
-                  placeholder="Password"
+                  placeholder='Password'
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
 
               <div>
-                <button className="botonLogin" onClick={onLogin}>
+                <button className='botonLogin' onClick={onLogin}>
                   Login
                 </button>
               </div>
             </form>
-            <p className="textoRegister">
-              No tienes cuenta?{" "}
-              <NavLink className="botonRegisterL" to="/signup">
+            <p className='textoRegister'>
+              ¿No tienes cuenta?{" "}
+              <NavLink className='botonRegisterL' to='/signup'>
                 Regístrate
               </NavLink>
             </p>
