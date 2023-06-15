@@ -10,6 +10,8 @@ import {
 } from "firebase/firestore";
 import { auth, db } from "../firebase";
 import "../components/Chat.css";
+import logoAtras from "../images/Icon/back.png";
+import { NavLink } from "react-router-dom";
 
 export const Chat = (props) => {
   const { room } = props;
@@ -69,11 +71,14 @@ export const Chat = (props) => {
   }, [showAutoMessage]);
 
   return (
-    <div className="chat-app">
-      <div className="header">
-        <h3>En este chat te ayudamos con: {room.toUpperCase()}</h3>
+    <div className='chat-app'>
+      <div className='header'>
+        <h3>{room.toUpperCase()}</h3>
       </div>
-      <div className="messages">
+      <NavLink to={"/start"}>
+        <img className='bton-volver-chat' src={logoAtras} alt='tramites' />
+      </NavLink>
+      <div className='messages'>
         {messages.map((message) => (
           <div
             className={`message ${
@@ -83,7 +88,7 @@ export const Chat = (props) => {
             }`}
             key={message.id}
           >
-            <span className="user">
+            <span className='user'>
               <b>{message.user}</b>
               <br />
             </span>
@@ -97,13 +102,14 @@ export const Chat = (props) => {
         </div>
       )}
       <form onSubmit={handleSubmit} className='new-message-form'>
+        <button className='linea-separar'></button>
         <input
-          className="new-message-input"
-          placeholder="Escribe un mensaje..."
+          className='new-message-input'
+          placeholder='Escribe un mensaje...'
           onChange={(e) => setNewMessage(e.target.value)}
           value={newMessage}
         />
-        <button type="submit" className="send-button-chat">
+        <button type='submit' className='send-button-chat'>
           Enviar
         </button>
       </form>

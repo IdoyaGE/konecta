@@ -1,4 +1,5 @@
 # konecta
+
 Proyecto de silvereconomy presentado como proyecto final en el desafío de tripulaciones de BBK Bootcamp by The Bridge.
 
 Web app para solucionar el problema de la soledad en las personas mayores.
@@ -56,6 +57,7 @@ Vamos con las librerías que tienes que instalar:
     path: versión 0.12.7,
     path-to-regexp: versión 6.2.1,
     universal-cookie: versión 4.0.4,
+
     
   ### frontend
   
@@ -66,6 +68,61 @@ Vamos con las librerías que tienes que instalar:
     react-dom: versión 18.2.0,
     sass: versión 1.62.1,
     universal-cookie: versión 4.0.4,
+    bootstrap: versión 5.3.0,
+    @emotion/react: versión 11.11.1,
+    @emotion/styled: versión 11.11.0,
+    @mui/icons-material: versión 5.11.16,
+    @mui/material: versión 5.13.4,
+    @reduxjs/toolkit: versión 1.9.5,
+    @testing-library/jest-dom: versión 5.16.5,
+    @testing-library/react: versión 13.4.0,
+    @testing-library/user-event: versión 13.5.0,
+    crypto-browserify: versión 3.12.0,
+    dom: versión 0.0.3,
+    dotenv: versión 16.1.4,
+    formik: versión 2.4.1",
+    install: versión 0.13.0,
+    mongoose: versión 7.2.3,
+    multer: versión 1.4.5-lts.1",
+    nextjs-cors: versión 2.1.2,
+    path: versión 0.12.7,
+    path-browserify: versión 1.0.1,
+    react-bootstrap: versión 2.7.4,
+    react-dropzone: versión 14.2.3,
+    react-persist: versión 1.0.2,
+    react-redux: versión 8.0.7,
+    react-router-dom: versión 6.12.0,
+    react-scripts: versión 5.0.1,
+    react-toastify: versión 9.1.3,
+    redux-persist: versión 6.0.0,
+    web-vitals: versión 2.1.4,
+    yup: versión 1.2.0,
+
+# styles
+
+Hemos utilizado sass para estilos de css anidados y plantillas de Bootstrap.
+
+# contenedor Docker
+
+Hemos creado un contenedor Docker para el backend, para el frontend y para mongoDB.
+
+Para arrancar el contenedor utiliza "docker compose up" e inicializa el backend y el frontend con "npm start".
+
+# colaboración
+
+Este proyecto ha sido desarrollado por estudiantes del BBK Bootcamp by TheBridge:
+
+https://github.com/JonZapataB
+https://github.com/IdoyaGE
+
+# agradecimientos
+
+Queremos agradecer a nuestro instructor de fullstack Danel:
+
+https://github.com/LdMe
+
+Sin él, este proyecto no existiría.
+=======
     bootstrap: versión 
    
   # styles
@@ -101,4 +158,5 @@ Vamos con las librerías que tienes que instalar:
  
   
   
+
 

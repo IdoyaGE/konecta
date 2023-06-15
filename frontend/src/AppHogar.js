@@ -11,6 +11,8 @@ import Navbar from "./components/navbar";
 import logo1 from "./images/Icon/Vector4.png";
 import logo2 from "./images/Icon/Primer_plano.png";
 import logo3 from "./images/Icon/Vector5.png";
+import logoAtras from "./images/Icon/back.png";
+import { NavLink } from "react-router-dom";
 
 const cookies = new Cookies();
 
@@ -57,13 +59,15 @@ function App() {
         <Chat room={room} />
       ) : (
         <div className='room'>
-          <h2>Estás en la categoría de HOGAR ¿En qué te podemos ayudar? </h2>
+          <h2 className='frase-app'>Hogar </h2>
+          <NavLink to={"/start"}>
+            <img className='bton-volver' src={logoAtras} alt='hogar' />
+          </NavLink>
           <div className='room-list'>
-
             {rooms.map((room, index) => (
-              <div className="room-item" key={index}>
+              <div className='room-item' key={index}>
                 <button
-                  className="botonChatHo"
+                  className='botonChatHo'
                   onClick={() => setRoom(room.name)}
                 >
                   <img src={room.image} alt={room.name} />

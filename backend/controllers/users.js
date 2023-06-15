@@ -56,7 +56,7 @@ const deleteUser = async (req, res) => {
 
   try {
     await User.findByIdAndDelete(id);
-    res.json({ message: "Perfil de usuario eliminado exitosamente" });
+    res.json({ message: "Perfil de usuario eliminado con éxito" });
   } catch (error) {
     res.status(400).json({ error: "Error al eliminar el perfil de usuario" });
   }

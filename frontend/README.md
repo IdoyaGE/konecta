@@ -1,70 +1,118 @@
-# Getting Started with Create React App
+# konecta
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Proyecto de silvereconomy presentado como proyecto final en el desafío de tripulaciones de BBK Bootcamp by The Bridge.
 
-## Available Scripts
+Web app para solucionar el problema de la soledad en las personas mayores.
 
-In the project directory, you can run:
+Queremos ofrecerles una plataforma para detectar problemas de su vida diaria a través de un chat y poder darles una solución offline adaptada a sus necesidades.
 
-### `npm start`
+# despegando
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Estas instrucciones te van a permitir obtener una copia para que puedas relizar pruebas.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Este proyecto es un MVP y determinadas funcionalidades no están totalmente desarrolladas.
 
-### `npm test`
+Instalación:
+$ git clone git@github.com:IdoyaGE/konecta.git
+$ npm install
+$ npm start.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# tecnologia
 
-### `npm run build`
+En este proyecto hemos utilizado MERN (stack de código abierto):
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Atlas MongoDB para la base de datos
+- Express
+- React (JavaScript)
+- Node.js
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Los datos del login y del chat están configurados para almacenarse en firebase (Authentication y Database).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Vamos con las librerías que tienes que instalar:
 
-### `npm run eject`
+# librerías instaladas
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### backend
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    axios: versión 1.4.0,
+    bcrypt: versión 5.1.0,
+    body-parser: versión 1.20.2,
+    cors: versión 2.8.5,
+    dotenv: versión 16.1.4,
+    express: versión 4.18.2,
+    firebase: 9.22.1,
+    gridfs-stream: 1.1.1,
+    helmet: versión 7.0.0,
+    jsonwebtoken: versión 9.0.0,
+    mongodb: versión 4.1,
+    mongoose: versión 7.2.2",
+    moongose: versión 1.0.0,
+    morgan: versión 1.10.0,
+    multer: versión 1.4.4",
+    node: versión 20.2.0,
+    nodemon: versión 2.0.22,
+    path: versión 0.12.7,
+    path-to-regexp: versión 6.2.1,
+    universal-cookie: versión 4.0.4,
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### frontend
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    axios: versión 1.4.0,
+    firebase: versión 9.22.1,
+    nodemon: versión 2.0.22,
+    react: versión 18.2.0,
+    react-dom: versión 18.2.0,
+    sass: versión 1.62.1,
+    universal-cookie: versión 4.0.4,
+    bootstrap: versión 5.3.0,
+    @emotion/react: versión 11.11.1,
+    @emotion/styled: versión 11.11.0,
+    @mui/icons-material: versión 5.11.16,
+    @mui/material: versión 5.13.4,
+    @reduxjs/toolkit: versión 1.9.5,
+    @testing-library/jest-dom: versión 5.16.5,
+    @testing-library/react: versión 13.4.0,
+    @testing-library/user-event: versión 13.5.0,
+    crypto-browserify: versión 3.12.0,
+    dom: versión 0.0.3,
+    dotenv: versión 16.1.4,
+    formik: versión 2.4.1",
+    install: versión 0.13.0,
+    mongoose: versión 7.2.3,
+    multer: versión 1.4.5-lts.1",
+    nextjs-cors: versión 2.1.2,
+    path: versión 0.12.7,
+    path-browserify: versión 1.0.1,
+    react-bootstrap: versión 2.7.4,
+    react-dropzone: versión 14.2.3,
+    react-persist: versión 1.0.2,
+    react-redux: versión 8.0.7,
+    react-router-dom: versión 6.12.0,
+    react-scripts: versión 5.0.1,
+    react-toastify: versión 9.1.3,
+    redux-persist: versión 6.0.0,
+    web-vitals: versión 2.1.4,
+    yup: versión 1.2.0,
 
-## Learn More
+# styles
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Hemos utilizado sass para estilos de css anidados y plantillas de Bootstrap.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# contenedor Docker
 
-### Code Splitting
+Hemos creado un contenedor Docker para el backend, para el frontend y para mongoDB.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Para arrancar el contenedor utiliza "docker compose up" e inicializa el backend y el frontend con "npm start".
 
-### Analyzing the Bundle Size
+# colaboración
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Este proyecto ha sido desarrollado por estudiantes del BBK Bootcamp by TheBridge:
+https://github.com/JonZapataB
+https://github.com/IdoyaGE
 
-### Making a Progressive Web App
+# agradecimientos
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Queremos agradecer a nuestro instructor de fullstack Danel:
+https://github.com/LdMe
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Sin él, este proyecto no existiría.
