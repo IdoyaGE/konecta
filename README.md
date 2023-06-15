@@ -4,7 +4,7 @@ Proyecto de silvereconomy presentado como proyecto final en el desafío de tripu
 
 Web app para solucionar el problema de la soledad en las personas mayores.
 
-Queremos ofrecerles una plataforma para detectar problemas de su vida diaria a través de un chat y poder darles una solución offline adaptada a sus necesidades.
+Queremos ofrecerles una plataforma para detectar problemas de su vida diaria a través de un chat y poder darles una solución offline adaptada a sus necesidades. 
 
 # despegando
 
@@ -14,20 +14,20 @@ Ten en cuenta que este proyecto es un MVP y que determinadas funcionalidades no 
 
 Instalación:
 
-$ git clone git@github.com:IdoyaGE/konecta.git
-
-$ npm install
-
-$ npm start
+ $ git clone git@github.com:IdoyaGE/konecta.git
+ 
+ $ npm install 
+ 
+ $ npm start
 
 # tecnología
 
 En este proyecto hemos utilizado MERN (stack de código abierto):
 
-- Atlas MongoDB para la base de datos
-- Express
-- React (JavaScript)
-- Node.js
++ Atlas MongoDB para la base de datos
++ Express 
++ React (JavaScript)
++ Node.js
 
 Los datos del login y del chat están configurados para almacenarse en firebase (Authentication y Database).
 
@@ -58,8 +58,9 @@ Vamos con las librerías que tienes que instalar:
     path-to-regexp: versión 6.2.1,
     universal-cookie: versión 4.0.4,
 
-### frontend
-
+    
+  ### frontend
+  
     axios: versión 1.4.0,
     firebase: versión 9.22.1,
     nodemon: versión 2.0.22,
@@ -121,3 +122,41 @@ Queremos agradecer a nuestro instructor de fullstack Danel:
 https://github.com/LdMe
 
 Sin él, este proyecto no existiría.
+=======
+    bootstrap: versión 
+   
+  # styles
+    
+  Hemos utilizado sass para estilos de css anidados y plantillas de Bootstrap. 
+    
+  # contenedor Docker
+  
+  Hemos creado un contenedor Docker para el backend, para el frontend y para mongoDB.
+  
+  Para arrancar el contenedor utiliza "docker compose up" e inicializa el backend y el frontend con "npm start".
+  
+  # colaboración
+  
+  Este proyecto ha sido desarrollado por estudiantes del BBK Bootcamp by TheBridge:
+  
+  https://github.com/JonZapataB
+  https://github.com/IdoyaGE
+  
+  
+  # agradecimientos
+  
+  Queremos agradecer a nuestro instructor de fullstack Danel:
+  
+  https://github.com/LdMe
+  
+  Sin él, este proyecto no existiría. 
+  
+  
+  
+ 
+  
+ 
+  
+  
+
+
